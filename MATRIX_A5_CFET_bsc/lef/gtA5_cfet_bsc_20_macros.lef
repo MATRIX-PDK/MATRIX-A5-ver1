@@ -1,0 +1,4853 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+  LAYER LEF58_TYPE STRING ;
+  LAYER LEF58_SPACING STRING ;
+  LAYER LEF58_WIDTH STRING ;
+END PROPERTYDEFINITIONS
+
+UNITS
+  DATABASE MICRONS 2000 ;
+END UNITS
+MANUFACTURINGGRID 0.0005 ;
+
+MACRO gtA5_cfet_bsc_20_and2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_and2_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0215 0.1215 0.0305 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0535 0.142 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0375 0.09 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0055 0.141 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_and2_x1_svt
+
+MACRO gtA5_cfet_bsc_20_and2_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_and2_x2_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.028 0.0215 0.076 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0055 0.18 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_and2_x2_svt
+
+MACRO gtA5_cfet_bsc_20_and2_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_and2_x3_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0535 0.226 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1155 0.0535 0.1635 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0215 0.102 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0055 0.18 0.0145 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0055 0.219 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_and2_x3_svt
+
+MACRO gtA5_cfet_bsc_20_and2_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_and2_x4_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0215 0.102 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0535 0.22 0.0625 ;
+      LAYER VSD ;
+        RECT 0.132 0.0535 0.141 0.0625 ;
+        RECT 0.21 0.0535 0.219 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+    LAYER M0 ;
+      RECT 0.015 0.0055 0.2385 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_and2_x4_svt
+
+MACRO gtA5_cfet_bsc_20_and3_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_and3_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1035 0.0535 0.1515 0.0625 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0535 0.0855 0.0625 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0215 0.0565 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0055 0.18 0.0145 ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0055 0.18 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_and3_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao211_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao211_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.2185 0.0215 0.2665 0.0305 ;
+      LAYER M1 ;
+        RECT 0.226 0.007 0.242 0.032 ;
+      LAYER V0 ;
+        RECT 0.2295 0.0215 0.2385 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1635 0.0215 0.2115 0.0305 ;
+      LAYER M1 ;
+        RECT 0.174 0.007 0.19 0.032 ;
+      LAYER V0 ;
+        RECT 0.1775 0.0215 0.1865 0.0305 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0025 0.0215 0.0505 0.0305 ;
+      LAYER M1 ;
+        RECT 0.018 0.007 0.034 0.032 ;
+      LAYER V0 ;
+        RECT 0.0215 0.0215 0.0305 0.0305 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.056 0.0215 0.104 0.0305 ;
+      LAYER M1 ;
+        RECT 0.07 0.007 0.086 0.032 ;
+      LAYER V0 ;
+        RECT 0.0735 0.0215 0.0825 0.0305 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1095 0.0215 0.1575 0.0305 ;
+      LAYER M1 ;
+        RECT 0.122 0.007 0.138 0.032 ;
+      LAYER V0 ;
+        RECT 0.1255 0.0215 0.1345 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.21 0.0535 0.219 0.0625 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.258 0.0465 ;
+      RECT 0.015 0.0535 0.219 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_ao211_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao21_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao21_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.102 0.0465 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0215 0.0565 0.0305 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0215 0.131 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.138 0.0535 0.186 0.0625 ;
+      LAYER VSD ;
+        RECT 0.171 0.0535 0.18 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.054 0.0055 0.1605 0.0145 ;
+      RECT 0.015 0.0535 0.102 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_ao21_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao22_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao22_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.15 0.0375 0.198 0.0465 ;
+    END
+  END A1
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0535 0.226 0.0625 ;
+      LAYER VSD ;
+        RECT 0.21 0.0535 0.219 0.0625 ;
+    END
+  END Y
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.07 0.004 0.086 0.048 ;
+      LAYER M0 ;
+        RECT 0.066 0.0055 0.1215 0.0145 ;
+        RECT 0.0345 0.0375 0.09 0.0465 ;
+      LAYER V0 ;
+        RECT 0.0735 0.0375 0.0825 0.0465 ;
+        RECT 0.0735 0.0055 0.0825 0.0145 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.044 0.007 0.06 0.032 ;
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+      LAYER V0 ;
+        RECT 0.0475 0.0215 0.0565 0.0305 ;
+    END
+  END B2
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.122 0.018 0.138 0.048 ;
+        RECT 0.018 0.004 0.034 0.034 ;
+      LAYER M0 ;
+        RECT 0.096 0.0375 0.144 0.0465 ;
+        RECT 0.008 0.0055 0.056 0.0145 ;
+      LAYER M2 ;
+        RECT 0.014 0.0215 0.142 0.0305 ;
+      LAYER V1 ;
+        RECT 0.0215 0.0215 0.0305 0.0305 ;
+        RECT 0.1255 0.0215 0.1345 0.0305 ;
+      LAYER V0 ;
+        RECT 0.0215 0.0055 0.0305 0.0145 ;
+        RECT 0.1255 0.0375 0.1345 0.0465 ;
+    END
+  END A2
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0535 0.141 0.0625 ;
+      RECT 0.054 0.0535 0.063 0.0625 ;
+    LAYER M0 ;
+      RECT 0.093 0.0215 0.1995 0.0305 ;
+      RECT 0.054 0.0535 0.141 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_ao22_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao31_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao31_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1035 0.0215 0.1515 0.0305 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0375 0.18 0.0465 ;
+    END
+  END A3
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0375 0.0565 0.0465 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0055 0.226 0.0145 ;
+      LAYER VSD ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0535 0.1995 0.0625 ;
+      RECT 0.054 0.0055 0.141 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_ao31_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao32_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao32_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0375 0.18 0.0465 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.104 0.0215 0.152 0.0305 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.071 0.0055 0.119 0.0145 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1815 0.0215 0.2295 0.0305 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.21 0.0375 0.258 0.0465 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0055 0.0565 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.249 0.0535 0.258 0.0625 ;
+      RECT 0.21 0.0055 0.219 0.0145 ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+    LAYER M0 ;
+      RECT 0.093 0.0535 0.258 0.0625 ;
+      RECT 0.17 0.0055 0.219 0.0145 ;
+      RECT 0.0345 0.0215 0.09 0.0305 ;
+    LAYER V0 ;
+      RECT 0.1775 0.0055 0.1865 0.0145 ;
+      RECT 0.0735 0.0215 0.0825 0.0305 ;
+    LAYER M1 ;
+      RECT 0.174 0.004 0.19 0.034 ;
+      RECT 0.07 0.009 0.086 0.034 ;
+    LAYER V1 ;
+      RECT 0.1775 0.0215 0.1865 0.0305 ;
+      RECT 0.0735 0.0215 0.0825 0.0305 ;
+    LAYER M2 ;
+      RECT 0.066 0.0215 0.194 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_ao32_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ao33_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ao33_x1_svt 0 0 ;
+  SIZE 0.312 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3345 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3345 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.066 0.0215 0.1605 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0375 0.194 0.0465 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0055 0.0825 0.0145 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.17 0.0215 0.22 0.0305 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.222 0.0375 0.298 0.0465 ;
+    END
+  END B2
+  PIN B3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.248 0.0215 0.298 0.0305 ;
+    END
+  END B3
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0375 0.064 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.288 0.0535 0.297 0.0625 ;
+      RECT 0.249 0.0055 0.258 0.0145 ;
+      RECT 0.21 0.0535 0.219 0.0625 ;
+      RECT 0.171 0.0055 0.18 0.0145 ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0535 0.297 0.0625 ;
+      RECT 0.093 0.0055 0.258 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_ao33_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi211_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi211_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.11 0.0375 0.158 0.0465 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0535 0.0855 0.0625 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0055 0.0735 0.0145 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0375 0.102 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+    LAYER M0 ;
+      RECT 0.093 0.0535 0.18 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi211_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi21_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi21_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0375 0.0565 0.0465 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1 0.0215 0.148 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0535 0.102 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi21_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi22_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi22_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0055 0.18 0.0145 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1035 0.0215 0.1515 0.0305 ;
+    END
+  END A2
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0375 0.0565 0.0465 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0535 0.18 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi22_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi31_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi31_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0055 0.18 0.0145 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0375 0.131 0.0465 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+    END
+  END A3
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0375 0.064 0.0465 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0215 0.18 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0535 0.141 0.0625 ;
+      RECT 0.054 0.0535 0.063 0.0625 ;
+    LAYER M0 ;
+      RECT 0.054 0.0535 0.141 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi31_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi32_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi32_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0375 0.142 0.0465 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1495 0.0375 0.1975 0.0465 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0055 0.226 0.0145 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.037 0.0375 0.085 0.0465 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0215 0.0565 0.0305 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.093 0.0535 0.102 0.0625 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0535 0.18 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi32_x1_svt
+
+MACRO gtA5_cfet_bsc_20_aoi33_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_aoi33_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A3
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.258 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.226 0.036 0.242 0.061 ;
+      LAYER M0 ;
+        RECT 0.2185 0.0375 0.2665 0.0465 ;
+      LAYER V0 ;
+        RECT 0.2295 0.0375 0.2385 0.0465 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.174 0.036 0.19 0.061 ;
+      LAYER M0 ;
+        RECT 0.1635 0.0375 0.2115 0.0465 ;
+      LAYER V0 ;
+        RECT 0.1775 0.0375 0.1865 0.0465 ;
+    END
+  END A2
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.018 0.023 0.034 0.048 ;
+      LAYER M0 ;
+        RECT 0.0025 0.0375 0.0505 0.0465 ;
+      LAYER V0 ;
+        RECT 0.0215 0.0375 0.0305 0.0465 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.07 0.036 0.086 0.061 ;
+      LAYER M0 ;
+        RECT 0.056 0.0375 0.104 0.0465 ;
+      LAYER V0 ;
+        RECT 0.0735 0.0375 0.0825 0.0465 ;
+    END
+  END B2
+  PIN B3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M1 ;
+        RECT 0.122 0.036 0.138 0.061 ;
+      LAYER M0 ;
+        RECT 0.1095 0.0375 0.1575 0.0465 ;
+      LAYER V0 ;
+        RECT 0.1255 0.0375 0.1345 0.0465 ;
+    END
+  END B3
+  OBS
+    LAYER VSD ;
+      RECT 0.21 0.0535 0.219 0.0625 ;
+      RECT 0.132 0.0535 0.141 0.0625 ;
+      RECT 0.054 0.0535 0.063 0.0625 ;
+    LAYER M0 ;
+      RECT 0.054 0.0535 0.219 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_aoi33_x1_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x10_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x10_svt 0 0 ;
+  SIZE 0.546 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.5685 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.5685 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.4245 0.0055 0.5115 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.375 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+        RECT 0.288 0.0055 0.297 0.0145 ;
+        RECT 0.366 0.0055 0.375 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.522 0.0535 0.531 0.0625 ;
+      RECT 0.444 0.0535 0.453 0.0625 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0535 0.531 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_buf_x10_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x12_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x12_svt 0 0 ;
+  SIZE 0.624 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.6465 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+        RECT 0.5595 0.026 0.5715 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.6465 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.5025 0.0055 0.5895 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.453 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+        RECT 0.288 0.0055 0.297 0.0145 ;
+        RECT 0.366 0.0055 0.375 0.0145 ;
+        RECT 0.444 0.0055 0.453 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0215 0.609 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_buf_x12_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x1_svt 0 0 ;
+  SIZE 0.117 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1395 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1395 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0535 0.0735 0.0625 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.06 0.0055 0.108 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.0825 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_buf_x1_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x2_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0055 0.131 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.028 0.0535 0.076 0.0625 ;
+      LAYER VSD ;
+        RECT 0.054 0.0535 0.063 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0215 0.141 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_buf_x2_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x3_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0055 0.0735 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0535 0.18 0.0625 ;
+      LAYER VSD ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+        RECT 0.171 0.0535 0.18 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0215 0.1605 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_buf_x3_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x4_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.161 0.0055 0.209 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0535 0.142 0.0625 ;
+      LAYER VSD ;
+        RECT 0.054 0.0535 0.063 0.0625 ;
+        RECT 0.132 0.0535 0.141 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0375 0.219 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_buf_x4_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x6_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x6_svt 0 0 ;
+  SIZE 0.351 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3735 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3735 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.2685 0.0535 0.3165 0.0625 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0535 0.219 0.0625 ;
+      LAYER VSD ;
+        RECT 0.054 0.0535 0.063 0.0625 ;
+        RECT 0.132 0.0535 0.141 0.0625 ;
+        RECT 0.21 0.0535 0.219 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0375 0.297 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_buf_x6_svt
+
+MACRO gtA5_cfet_bsc_20_buf_x8_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_buf_x8_svt 0 0 ;
+  SIZE 0.429 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.4515 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.4515 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.3465 0.0535 0.3945 0.0625 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0535 0.297 0.0625 ;
+      LAYER VSD ;
+        RECT 0.054 0.0535 0.063 0.0625 ;
+        RECT 0.132 0.0535 0.141 0.0625 ;
+        RECT 0.21 0.0535 0.219 0.0625 ;
+        RECT 0.288 0.0535 0.297 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0375 0.375 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_buf_x8_svt
+
+MACRO gtA5_cfet_bsc_20_dffasync_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_dffasync_x1_svt 0 0 ;
+  SIZE 0.819 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.8415 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+        RECT 0.5985 0.026 0.6105 0.046 ;
+        RECT 0.6765 0.026 0.6885 0.046 ;
+        RECT 0.7545 0.026 0.7665 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.8415 0.012 ;
+    END
+  END VSS
+  PIN CLK
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER M0 ;
+        RECT 0.5025 0.0375 0.6675 0.0465 ;
+    END
+  END CLK
+  PIN D
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.7275 0.0535 0.7755 0.0625 ;
+    END
+  END D
+  PIN Q
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.171 0.0055 0.3555 0.0145 ;
+      LAYER VSD ;
+        RECT 0.171 0.0055 0.18 0.0145 ;
+        RECT 0.249 0.0055 0.258 0.0145 ;
+    END
+  END Q
+  PIN RESETN
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.3075 0.0215 0.7845 0.0305 ;
+    END
+  END RESETN
+  PIN SETN
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1125 0.0535 0.1995 0.0625 ;
+    END
+  END SETN
+  OBS
+    LAYER VSD ;
+      RECT 0.795 0.0055 0.804 0.0145 ;
+      RECT 0.717 0.0055 0.726 0.0145 ;
+      RECT 0.639 0.0535 0.648 0.0625 ;
+      RECT 0.561 0.0535 0.57 0.0625 ;
+      RECT 0.522 0.0055 0.531 0.0145 ;
+      RECT 0.444 0.0055 0.453 0.0145 ;
+      RECT 0.366 0.0535 0.375 0.0625 ;
+      RECT 0.288 0.0535 0.297 0.0625 ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+      RECT 0.015 0.0055 0.024 0.0145 ;
+    LAYER M0 ;
+      RECT 0.612 0.0055 0.804 0.0145 ;
+      RECT 0.3855 0.0535 0.7065 0.0625 ;
+      RECT 0.378 0.0055 0.5895 0.0145 ;
+      RECT 0.17 0.0375 0.4725 0.0465 ;
+      RECT 0.2295 0.0535 0.375 0.0625 ;
+      RECT 0.0735 0.0215 0.298 0.0305 ;
+      RECT 0.0345 0.0375 0.1605 0.0465 ;
+      RECT 0.015 0.0055 0.142 0.0145 ;
+      RECT 0.0185 0.0215 0.0665 0.0305 ;
+    LAYER V0 ;
+      RECT 0.6195 0.0055 0.6285 0.0145 ;
+      RECT 0.3855 0.0055 0.3945 0.0145 ;
+      RECT 0.2815 0.0215 0.2905 0.0305 ;
+      RECT 0.1775 0.0375 0.1865 0.0465 ;
+      RECT 0.1255 0.0055 0.1345 0.0145 ;
+      RECT 0.0475 0.0215 0.0565 0.0305 ;
+    LAYER M1 ;
+      RECT 0.616 0.004 0.632 0.034 ;
+      RECT 0.382 0.004 0.398 0.05 ;
+      RECT 0.278 0.009 0.294 0.034 ;
+      RECT 0.174 0.018 0.19 0.048 ;
+      RECT 0.122 0.004 0.138 0.034 ;
+      RECT 0.044 0.02 0.06 0.05 ;
+    LAYER V1 ;
+      RECT 0.6195 0.0215 0.6285 0.0305 ;
+      RECT 0.3855 0.0375 0.3945 0.0465 ;
+      RECT 0.2815 0.0215 0.2905 0.0305 ;
+      RECT 0.1775 0.0215 0.1865 0.0305 ;
+      RECT 0.1255 0.0215 0.1345 0.0305 ;
+      RECT 0.0475 0.0375 0.0565 0.0465 ;
+    LAYER M2 ;
+      RECT 0.274 0.0215 0.636 0.0305 ;
+      RECT 0.04 0.0375 0.402 0.0465 ;
+      RECT 0.094 0.0215 0.194 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_dffasync_x1_svt
+
+MACRO gtA5_cfet_bsc_20_dffpos_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_dffpos_x1_svt 0 0 ;
+  SIZE 0.858 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.8805 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.2865 0.026 0.2985 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+        RECT 0.5205 0.026 0.5325 0.046 ;
+        RECT 0.5985 0.026 0.6105 0.046 ;
+        RECT 0.6765 0.026 0.6885 0.046 ;
+        RECT 0.7155 0.026 0.7275 0.046 ;
+        RECT 0.7935 0.026 0.8055 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.8805 0.012 ;
+    END
+  END VSS
+  PIN CLK
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER M2 ;
+        RECT 0.508 0.0375 0.818 0.0465 ;
+      LAYER M1 ;
+        RECT 0.798 0.0335 0.814 0.0665 ;
+        RECT 0.512 0.0335 0.528 0.0665 ;
+      LAYER M0 ;
+        RECT 0.7975 0.0535 0.8235 0.0625 ;
+        RECT 0.2685 0.0535 0.532 0.0625 ;
+      LAYER V0 ;
+        RECT 0.5155 0.0535 0.5245 0.0625 ;
+        RECT 0.8015 0.0535 0.8105 0.0625 ;
+      LAYER V1 ;
+        RECT 0.5155 0.0375 0.5245 0.0465 ;
+        RECT 0.8015 0.0375 0.8105 0.0465 ;
+    END
+  END CLK
+  PIN D
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.773 0.0055 0.821 0.0145 ;
+    END
+  END D
+  PIN Q
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0375 0.142 0.0465 ;
+    END
+  END Q
+  OBS
+    LAYER VSD ;
+      RECT 0.756 0.0055 0.765 0.0145 ;
+      RECT 0.639 0.0535 0.648 0.0625 ;
+      RECT 0.561 0.0535 0.57 0.0625 ;
+      RECT 0.444 0.0055 0.453 0.0145 ;
+      RECT 0.366 0.0055 0.375 0.0145 ;
+      RECT 0.249 0.0535 0.258 0.0625 ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+    LAYER M0 ;
+      RECT 0.716 0.0375 0.843 0.0465 ;
+      RECT 0.5805 0.0055 0.765 0.0145 ;
+      RECT 0.6585 0.0535 0.7455 0.0625 ;
+      RECT 0.4635 0.0375 0.687 0.0465 ;
+      RECT 0.603 0.0535 0.651 0.0625 ;
+      RECT 0.5435 0.0535 0.5915 0.0625 ;
+      RECT 0.3855 0.0215 0.584 0.0305 ;
+      RECT 0.444 0.0055 0.5505 0.0145 ;
+      RECT 0.1905 0.0055 0.375 0.0145 ;
+      RECT 0.0345 0.0215 0.297 0.0305 ;
+      RECT 0.213 0.0535 0.261 0.0625 ;
+      RECT 0.0735 0.0535 0.18 0.0625 ;
+      RECT 0.015 0.0055 0.1605 0.0145 ;
+    LAYER V0 ;
+      RECT 0.7235 0.0375 0.7325 0.0465 ;
+      RECT 0.7235 0.0535 0.7325 0.0625 ;
+      RECT 0.6195 0.0375 0.6285 0.0465 ;
+      RECT 0.6195 0.0535 0.6285 0.0625 ;
+      RECT 0.5675 0.0215 0.5765 0.0305 ;
+      RECT 0.5675 0.0535 0.5765 0.0625 ;
+      RECT 0.2295 0.0215 0.2385 0.0305 ;
+      RECT 0.2295 0.0535 0.2385 0.0625 ;
+    LAYER M1 ;
+      RECT 0.72 0.025 0.736 0.0665 ;
+      RECT 0.616 0.036 0.632 0.064 ;
+      RECT 0.564 0.02 0.58 0.064 ;
+      RECT 0.226 0.02 0.242 0.064 ;
+  END
+END gtA5_cfet_bsc_20_dffpos_x1_svt
+
+
+MACRO gtA5_cfet_bsc_20_dffsyn_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_dffsyn_x1_svt 0 0 ;
+  SIZE 0.858 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.8805 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.2865 0.026 0.2985 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+        RECT 0.5205 0.026 0.5325 0.046 ;
+        RECT 0.5985 0.026 0.6105 0.046 ;
+        RECT 0.6765 0.026 0.6885 0.046 ;
+        RECT 0.7155 0.026 0.7275 0.046 ;
+        RECT 0.7935 0.026 0.8055 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.8805 0.012 ;
+    END
+  END VSS
+  PIN CLK
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER M0 ;
+        RECT 0.6585 0.0535 0.8235 0.0625 ;
+    END
+  END CLK
+  PIN D
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.773 0.0055 0.821 0.0145 ;
+    END
+  END D
+  PIN Q
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0375 0.142 0.0465 ;
+    END
+  END Q
+  OBS
+    LAYER VSD ;
+      RECT 0.756 0.0055 0.765 0.0145 ;
+      RECT 0.639 0.0535 0.648 0.0625 ;
+      RECT 0.561 0.0535 0.57 0.0625 ;
+      RECT 0.444 0.0055 0.453 0.0145 ;
+      RECT 0.366 0.0055 0.375 0.0145 ;
+      RECT 0.249 0.0535 0.258 0.0625 ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+    LAYER M0 ;
+      RECT 0.716 0.0375 0.843 0.0465 ;
+      RECT 0.5805 0.0055 0.765 0.0145 ;
+      RECT 0.4635 0.0375 0.687 0.0465 ;
+      RECT 0.603 0.0535 0.651 0.0625 ;
+      RECT 0.5435 0.0535 0.5915 0.0625 ;
+      RECT 0.3855 0.0215 0.584 0.0305 ;
+      RECT 0.444 0.0055 0.5505 0.0145 ;
+      RECT 0.2685 0.0535 0.532 0.0625 ;
+      RECT 0.1905 0.0055 0.375 0.0145 ;
+      RECT 0.0345 0.0215 0.297 0.0305 ;
+      RECT 0.213 0.0535 0.261 0.0625 ;
+      RECT 0.0735 0.0535 0.18 0.0625 ;
+      RECT 0.015 0.0055 0.1605 0.0145 ;
+    LAYER V0 ;
+      RECT 0.7235 0.0375 0.7325 0.0465 ;
+      RECT 0.6195 0.0375 0.6285 0.0465 ;
+      RECT 0.6195 0.0535 0.6285 0.0625 ;
+      RECT 0.5675 0.0215 0.5765 0.0305 ;
+      RECT 0.5675 0.0535 0.5765 0.0625 ;
+      RECT 0.5155 0.0535 0.5245 0.0625 ;
+      RECT 0.2295 0.0215 0.2385 0.0305 ;
+      RECT 0.2295 0.0535 0.2385 0.0625 ;
+    LAYER M1 ;
+      RECT 0.72 0.025 0.736 0.05 ;
+      RECT 0.616 0.036 0.632 0.064 ;
+      RECT 0.564 0.02 0.58 0.064 ;
+      RECT 0.512 0.034 0.528 0.064 ;
+      RECT 0.226 0.02 0.242 0.064 ;
+    LAYER V1 ;
+      RECT 0.7235 0.0375 0.7325 0.0465 ;
+      RECT 0.5155 0.0375 0.5245 0.0465 ;
+    LAYER M2 ;
+      RECT 0.508 0.0375 0.74 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_dffsyn_x1_svt
+
+MACRO gtA5_cfet_bsc_20_dlatch_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_dlatch_x1_svt 0 0 ;
+  SIZE 0.39 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.4125 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.2865 0.026 0.2985 0.046 ;
+        RECT 0.3645 0.026 0.3765 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.4125 0.012 ;
+    END
+  END VSS
+  PIN CLK
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0215 0.1605 0.0305 ;
+    END
+  END CLK
+  PIN D
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0535 0.102 0.0625 ;
+    END
+  END D
+  PIN Q
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.2685 0.0055 0.376 0.0145 ;
+      LAYER VSD ;
+        RECT 0.327 0.0055 0.336 0.0145 ;
+    END
+  END Q
+  OBS
+    LAYER VSD ;
+      RECT 0.249 0.0535 0.258 0.0625 ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+    LAYER M0 ;
+      RECT 0.21 0.0375 0.3555 0.0465 ;
+      RECT 0.249 0.0535 0.3555 0.0625 ;
+      RECT 0.17 0.0215 0.3165 0.0305 ;
+      RECT 0.132 0.0055 0.2385 0.0145 ;
+      RECT 0.092 0.0375 0.194 0.0465 ;
+      RECT 0.015 0.0055 0.1215 0.0145 ;
+    LAYER V0 ;
+      RECT 0.1775 0.0215 0.1865 0.0305 ;
+      RECT 0.1775 0.0375 0.1865 0.0465 ;
+      RECT 0.0995 0.0055 0.1085 0.0145 ;
+      RECT 0.0995 0.0375 0.1085 0.0465 ;
+    LAYER M1 ;
+      RECT 0.174 0.02 0.19 0.054 ;
+      RECT 0.096 0.004 0.112 0.054 ;
+  END
+END gtA5_cfet_bsc_20_dlatch_x1_svt
+
+MACRO gtA5_cfet_bsc_20_ha_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_ha_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1125 0.0535 0.2385 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1515 0.0375 0.1995 0.0465 ;
+    END
+  END B
+  PIN CON
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.258 0.0145 ;
+      LAYER VSD ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+    END
+  END CON
+  PIN SN
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0535 0.102 0.0625 ;
+      LAYER VSD ;
+        RECT 0.054 0.0535 0.063 0.0625 ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+    END
+  END SN
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0215 0.141 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_ha_x1_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x10_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x10_svt 0 0 ;
+  SIZE 0.429 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.4515 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.4515 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.3945 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.375 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x10_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x12_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x12_svt 0 0 ;
+  SIZE 0.507 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.5295 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+        RECT 0.4035 0.026 0.4155 0.046 ;
+        RECT 0.4815 0.026 0.4935 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.5295 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.4725 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.453 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x12_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x1_svt 0 0 ;
+  SIZE 0.078 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1005 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1005 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.022 0.0215 0.07 0.0305 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0055 0.0565 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x1_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x2_svt 0 0 ;
+  SIZE 0.117 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1395 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1395 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0535 0.09 0.0625 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.028 0.0375 0.076 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x2_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x3_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0535 0.142 0.0625 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0215 0.116 0.0305 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x3_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x4_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0375 0.1605 0.0465 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0055 0.141 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x4_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x6_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x6_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.2385 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.219 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x6_svt
+
+MACRO gtA5_cfet_bsc_20_inv_x8_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_inv_x8_svt 0 0 ;
+  SIZE 0.351 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3735 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+        RECT 0.3255 0.026 0.3375 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3735 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.3165 0.0145 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.297 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_inv_x8_svt
+
+MACRO gtA5_cfet_bsc_20_nand2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nand2_x1_svt 0 0 ;
+  SIZE 0.117 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1395 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1395 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.102 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0535 0.0735 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0055 0.064 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nand2_x1_svt
+
+MACRO gtA5_cfet_bsc_20_nand2_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nand2_x2_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0055 0.1605 0.0145 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0375 0.168 0.0465 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0535 0.18 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+        RECT 0.171 0.0535 0.18 0.0625 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nand2_x2_svt
+
+MACRO gtA5_cfet_bsc_20_nand2_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nand2_x3_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0215 0.2385 0.0305 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0535 0.1995 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.219 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nand2_x3_svt
+
+MACRO gtA5_cfet_bsc_20_nand2_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nand2_x4_svt 0 0 ;
+  SIZE 0.351 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3735 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.2865 0.026 0.2985 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3735 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0055 0.2775 0.0145 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0215 0.3165 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0535 0.336 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+        RECT 0.171 0.0535 0.18 0.0625 ;
+        RECT 0.249 0.0535 0.258 0.0625 ;
+        RECT 0.327 0.0535 0.336 0.0625 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nand2_x4_svt
+
+MACRO gtA5_cfet_bsc_20_nand3_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nand3_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.102 0.0465 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.142 0.0145 ;
+      LAYER VSD ;
+        RECT 0.054 0.0055 0.063 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nand3_x1_svt
+
+MACRO gtA5_cfet_bsc_20_nor2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor2_x1_svt 0 0 ;
+  SIZE 0.117 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1395 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1395 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.061 0.0055 0.109 0.0145 ;
+      LAYER M1 ;
+        RECT 0.07 0.0035 0.086 0.0285 ;
+      LAYER V0 ;
+        RECT 0.0735 0.0055 0.0825 0.0145 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.005 0.0055 0.053 0.0145 ;
+      LAYER M1 ;
+        RECT 0.018 0.0035 0.034 0.0285 ;
+      LAYER V0 ;
+        RECT 0.0215 0.0055 0.0305 0.0145 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0215 0.102 0.0305 ;
+      LAYER M1 ;
+        RECT 0.044 0.007 0.06 0.032 ;
+      LAYER V0 ;
+        RECT 0.0475 0.0215 0.0565 0.0305 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nor2_x1_svt
+
+MACRO gtA5_cfet_bsc_20_nor2_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor2_x2_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0375 0.1605 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0535 0.1215 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.18 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nor2_x2_svt
+
+MACRO gtA5_cfet_bsc_20_nor2_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor2_x3_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0535 0.1995 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0215 0.2385 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.258 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+        RECT 0.249 0.0055 0.258 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nor2_x3_svt
+
+MACRO gtA5_cfet_bsc_20_nor2_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor2_x4_svt 0 0 ;
+  SIZE 0.351 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3735 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3735 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0375 0.2775 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0535 0.3165 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.336 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+        RECT 0.171 0.0055 0.18 0.0145 ;
+        RECT 0.327 0.0055 0.336 0.0145 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nor2_x4_svt
+
+MACRO gtA5_cfet_bsc_20_nor3_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor3_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1 0.0535 0.148 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0535 0.0855 0.0625 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0055 0.0735 0.0145 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0375 0.102 0.0465 ;
+    END
+  END Y
+END gtA5_cfet_bsc_20_nor3_x1_svt
+
+MACRO gtA5_cfet_bsc_20_nor3_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_nor3_x2_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0735 0.0535 0.1215 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0215 0.1605 0.0305 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1905 0.0215 0.2385 0.0305 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.219 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.249 0.0535 0.258 0.0625 ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.17 0.0535 0.258 0.0625 ;
+      RECT 0.054 0.0055 0.141 0.0145 ;
+      RECT 0.015 0.0535 0.064 0.0625 ;
+    LAYER V0 ;
+      RECT 0.1775 0.0535 0.1865 0.0625 ;
+      RECT 0.0475 0.0535 0.0565 0.0625 ;
+    LAYER M1 ;
+      RECT 0.174 0.034 0.19 0.064 ;
+      RECT 0.044 0.034 0.06 0.064 ;
+    LAYER V1 ;
+      RECT 0.1775 0.0375 0.1865 0.0465 ;
+      RECT 0.0475 0.0375 0.0565 0.0465 ;
+    LAYER M2 ;
+      RECT 0.04 0.0375 0.194 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_nor3_x2_svt
+
+MACRO gtA5_cfet_bsc_20_oa211_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa211_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0215 0.102 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.149 0.0535 0.197 0.0625 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0215 0.226 0.0305 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+      RECT 0.015 0.0055 0.024 0.0145 ;
+    LAYER M0 ;
+      RECT 0.015 0.0055 0.1995 0.0145 ;
+      RECT 0.015 0.0375 0.102 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oa211_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oa21_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa21_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0215 0.102 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+    LAYER M0 ;
+      RECT 0.093 0.0375 0.18 0.0465 ;
+      RECT 0.0345 0.0055 0.141 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_oa21_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oa22_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa22_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.149 0.0375 0.197 0.0465 ;
+      LAYER M1 ;
+        RECT 0.174 0.023 0.19 0.048 ;
+      LAYER V0 ;
+        RECT 0.1775 0.0375 0.1865 0.0465 ;
+    END
+  END A2
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0575 0.0055 0.1055 0.0145 ;
+      LAYER M1 ;
+        RECT 0.07 0.0035 0.086 0.0285 ;
+      LAYER V0 ;
+        RECT 0.0735 0.0055 0.0825 0.0145 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.144 0.0535 0.1995 0.0625 ;
+        RECT 0.1125 0.0055 0.168 0.0145 ;
+      LAYER M1 ;
+        RECT 0.148 0.004 0.164 0.064 ;
+      LAYER V0 ;
+        RECT 0.1515 0.0535 0.1605 0.0625 ;
+        RECT 0.1515 0.0055 0.1605 0.0145 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0035 0.0055 0.0515 0.0145 ;
+      LAYER M1 ;
+        RECT 0.018 0.0035 0.034 0.0285 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+      LAYER V0 ;
+        RECT 0.0215 0.0055 0.0305 0.0145 ;
+    END
+  END Y
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1785 0.0055 0.2265 0.0145 ;
+        RECT 0.0825 0.0535 0.1305 0.0625 ;
+      LAYER M1 ;
+        RECT 0.2 0.004 0.216 0.034 ;
+        RECT 0.096 0.018 0.112 0.064 ;
+      LAYER M2 ;
+        RECT 0.092 0.0215 0.22 0.0305 ;
+      LAYER V1 ;
+        RECT 0.0995 0.0215 0.1085 0.0305 ;
+        RECT 0.2035 0.0215 0.2125 0.0305 ;
+      LAYER V0 ;
+        RECT 0.0995 0.0535 0.1085 0.0625 ;
+        RECT 0.2035 0.0055 0.2125 0.0145 ;
+    END
+  END A1
+  OBS
+    LAYER M0 ;
+      RECT 0.093 0.0215 0.18 0.0305 ;
+      RECT 0.0345 0.0375 0.141 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oa22_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oa31_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa31_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0215 0.0735 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.037 0.0535 0.085 0.0625 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0535 0.142 0.0625 ;
+    END
+  END A3
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1495 0.0535 0.1975 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.178 0.0375 0.226 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+    LAYER M0 ;
+      RECT 0.015 0.0055 0.1995 0.0145 ;
+      RECT 0.054 0.0375 0.141 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oa31_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oa32_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa32_x1_svt 0 0 ;
+  SIZE 0.312 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3345 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3345 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.168 0.0535 0.216 0.0625 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1135 0.0535 0.1615 0.0625 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0215 0.131 0.0305 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0055 0.0855 0.0145 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.256 0.0535 0.304 0.0625 ;
+      LAYER VSD ;
+        RECT 0.288 0.0535 0.297 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.093 0.0055 0.102 0.0145 ;
+    LAYER M0 ;
+      RECT 0.093 0.0055 0.2775 0.0145 ;
+      RECT 0.015 0.0375 0.18 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oa32_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oa33_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oa33_x1_svt 0 0 ;
+  SIZE 0.312 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.3345 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.3345 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1035 0.0215 0.1515 0.0305 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.227 0.0375 0.275 0.0465 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.17 0.0535 0.22 0.0625 ;
+    END
+  END B2
+  PIN B3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.115 0.0535 0.163 0.0625 ;
+    END
+  END B3
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.256 0.0535 0.304 0.0625 ;
+      LAYER VSD ;
+        RECT 0.288 0.0535 0.297 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+    LAYER M0 ;
+      RECT 0.015 0.0055 0.2775 0.0145 ;
+      RECT 0.054 0.0375 0.219 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oa33_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai211_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai211_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.04 0.0535 0.09 0.0625 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0215 0.0565 0.0305 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.104 0.0535 0.152 0.0625 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.141 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.102 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oai211_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai21_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai21_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0215 0.0855 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0255 0.0535 0.0735 0.0625 ;
+    END
+  END A2
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1 0.0215 0.148 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.102 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oai21_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai22_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai22_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END A2
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.037 0.0055 0.085 0.0145 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0055 0.142 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.18 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oai22_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai31_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai31_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0215 0.102 0.0305 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0535 0.131 0.0625 ;
+    END
+  END A3
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0215 0.18 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0055 0.141 0.0145 ;
+      LAYER VSD ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.054 0.0375 0.141 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oai31_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai32_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai32_x1_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.2085 0.026 0.2205 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.161 0.0215 0.209 0.0305 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1355 0.0535 0.1835 0.0625 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.078 0.0535 0.126 0.0625 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0055 0.0855 0.0145 ;
+    END
+  END B2
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.093 0.0055 0.219 0.0145 ;
+      LAYER VSD ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.015 0.0375 0.18 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_oai32_x1_svt
+
+MACRO gtA5_cfet_bsc_20_oai33_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_oai33_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1355 0.0055 0.1835 0.0145 ;
+    END
+  END A1
+  PIN A2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.161 0.0375 0.209 0.0465 ;
+    END
+  END A2
+  PIN A3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.21 0.0055 0.258 0.0145 ;
+    END
+  END A3
+  PIN B1
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.078 0.0055 0.126 0.0145 ;
+    END
+  END B1
+  PIN B2
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.102 0.0465 ;
+    END
+  END B2
+  PIN B3
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0055 0.0565 0.0145 ;
+    END
+  END B3
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.015 0.0535 0.258 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+        RECT 0.249 0.0535 0.258 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.054 0.0215 0.219 0.0305 ;
+  END
+END gtA5_cfet_bsc_20_oai33_x1_svt
+
+MACRO gtA5_cfet_bsc_20_or2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_or2_x1_svt 0 0 ;
+  SIZE 0.156 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.1785 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.1785 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0375 0.131 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0055 0.102 0.0145 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0375 0.0565 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0535 0.141 0.0625 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0535 0.141 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_or2_x1_svt
+
+MACRO gtA5_cfet_bsc_20_or2_x2_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_or2_x2_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0375 0.18 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.083 0.0055 0.131 0.0145 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.028 0.0375 0.076 0.0465 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.171 0.0535 0.18 0.0625 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0535 0.18 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_or2_x2_svt
+
+MACRO gtA5_cfet_bsc_20_or2_x3_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_or2_x3_svt 0 0 ;
+  SIZE 0.234 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2565 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1305 0.026 0.1425 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2565 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.161 0.0375 0.209 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0055 0.18 0.0145 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0055 0.102 0.0145 ;
+      LAYER VSD ;
+        RECT 0.015 0.0055 0.024 0.0145 ;
+        RECT 0.093 0.0055 0.102 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.21 0.0535 0.219 0.0625 ;
+    LAYER M0 ;
+      RECT 0.0345 0.0535 0.219 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_or2_x3_svt
+
+MACRO gtA5_cfet_bsc_20_or2_x4_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_or2_x4_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0915 0.026 0.1035 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0055 0.0565 0.0145 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.054 0.0375 0.102 0.0465 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0055 0.22 0.0145 ;
+      LAYER VSD ;
+        RECT 0.132 0.0055 0.141 0.0145 ;
+        RECT 0.21 0.0055 0.219 0.0145 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.015 0.0535 0.024 0.0625 ;
+    LAYER M0 ;
+      RECT 0.015 0.0535 0.2385 0.0625 ;
+  END
+END gtA5_cfet_bsc_20_or2_x4_svt
+
+MACRO gtA5_cfet_bsc_20_or3_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_or3_x1_svt 0 0 ;
+  SIZE 0.195 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2175 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2175 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0375 0.0055 0.0855 0.0145 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1035 0.0055 0.1515 0.0145 ;
+    END
+  END B
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.132 0.0535 0.18 0.0625 ;
+    END
+  END C
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0085 0.0535 0.0565 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER M0 ;
+      RECT 0.0345 0.0375 0.18 0.0465 ;
+  END
+END gtA5_cfet_bsc_20_or3_x1_svt
+
+MACRO gtA5_cfet_bsc_20_xnor2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_xnor2_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0525 0.026 0.0645 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+        RECT 0.2475 0.026 0.2595 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1125 0.0375 0.2385 0.0465 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1515 0.0535 0.1995 0.0625 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.014 0.0535 0.102 0.0625 ;
+      LAYER VSD ;
+        RECT 0.015 0.0535 0.024 0.0625 ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.21 0.0055 0.219 0.0145 ;
+    LAYER M0 ;
+      RECT 0.21 0.0055 0.258 0.0145 ;
+      RECT 0.0345 0.0215 0.258 0.0305 ;
+      RECT 0.054 0.0055 0.141 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_xnor2_x1_svt
+
+MACRO gtA5_cfet_bsc_20_xor2_x1_svt
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_bsc_20_xor2_x1_svt 0 0 ;
+  SIZE 0.273 BY 0.068 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_bsc_20 ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 0.024 0.2955 0.048 ;
+      LAYER VBPR ;
+        RECT 0.0135 0.026 0.0255 0.046 ;
+        RECT 0.1695 0.026 0.1815 0.046 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER BPR ;
+        RECT -0.0225 -0.012 0.2955 0.012 ;
+    END
+  END VSS
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.1515 0.0535 0.2385 0.0625 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.0345 0.0215 0.1995 0.0305 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER M0 ;
+        RECT 0.092 0.0535 0.142 0.0625 ;
+      LAYER VSD ;
+        RECT 0.093 0.0535 0.102 0.0625 ;
+    END
+  END Y
+  OBS
+    LAYER VSD ;
+      RECT 0.132 0.0055 0.141 0.0145 ;
+      RECT 0.054 0.0055 0.063 0.0145 ;
+    LAYER M0 ;
+      RECT 0.054 0.0375 0.258 0.0465 ;
+      RECT 0.054 0.0055 0.141 0.0145 ;
+  END
+END gtA5_cfet_bsc_20_xor2_x1_svt
+
+END LIBRARY

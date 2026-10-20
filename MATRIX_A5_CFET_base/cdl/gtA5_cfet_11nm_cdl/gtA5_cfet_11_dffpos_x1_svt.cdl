@@ -1,0 +1,60 @@
+.subckt gtA5_cfet_11_dffpos_x1_svt CLK D Q VDD VSS
+*.PININFO CLK:I D:I Q:O VDD:B VSS:B
+* posedge reset-free D flip-flop: derived from gtA5_cfet_11_dffsyn_x1_svt by swapping the
+* master/slave latch enables (master on net7 = !CLK, slave on CLK).
+
+* --- XI0: d_latch (CLK=net7, D=D, Q=net6)
+* --- XI0/XI3: nand (A=net6, B=XI0_net12, Z=XI0_net13)
+MM030 XI0_XI3_net7 net6       VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM031 XI0_net13    XI0_net12  XI0_XI3_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM032 XI0_net13    net6       VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM033 XI0_net13    XI0_net12  VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI0/XI2: nand (A=XI0_net8, B=net7, Z=XI0_net12)
+MM020 XI0_XI2_net7 XI0_net8   VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM021 XI0_net12    net7       XI0_XI2_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM022 XI0_net12    XI0_net8   VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM023 XI0_net12    net7       VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI0/XI1: nand (A=XI0_net8, B=XI0_net13, Z=net6)
+MM010 XI0_XI1_net7 XI0_net8   VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM011 net6         XI0_net13  XI0_XI1_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM012 net6         XI0_net8   VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM013 net6         XI0_net13  VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI0/XI0: nand (A=D, B=net7, Z=XI0_net8)
+MM000 XI0_XI0_net7 D          VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM001 XI0_net8     net7       XI0_XI0_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM002 XI0_net8     D          VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM003 XI0_net8     net7       VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI1: d_latch (CLK=CLK, D=net6, Q=Q)
+* --- XI1/XI3: nand (A=Q, B=XI1_net12, Z=XI1_net13)
+MM130 XI1_XI3_net7 Q          VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM131 XI1_net13    XI1_net12  XI1_XI3_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM132 XI1_net13    Q          VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM133 XI1_net13    XI1_net12  VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI1/XI2: nand (A=XI1_net8, B=CLK, Z=XI1_net12)
+MM120 XI1_XI2_net7 XI1_net8   VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM121 XI1_net12    CLK        XI1_XI2_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM122 XI1_net12    XI1_net8   VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM123 XI1_net12    CLK        VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI1/XI1: nand (A=XI1_net8, B=XI1_net13, Z=Q)
+MM110 XI1_XI1_net7 XI1_net8   VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM111 Q            XI1_net13  XI1_XI1_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM112 Q            XI1_net8   VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM113 Q            XI1_net13  VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI1/XI0: nand (A=net6, B=CLK, Z=XI1_net8)
+MM100 XI1_XI0_net7 net6       VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM101 XI1_net8     CLK        XI1_XI0_net7 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM102 XI1_net8     net6       VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM103 XI1_net8     CLK        VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+
+* --- XI2: inverter (A=CLK, Out=net7)
+MM200 net7         CLK        VDD          VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM201 net7         CLK        VSS          VSS nmos_svt WGAA=0.011u L=0.012u M=1
+
+.ends gtA5_cfet_11_dffpos_x1_svt

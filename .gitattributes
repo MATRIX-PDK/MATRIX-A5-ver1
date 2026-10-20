@@ -1,0 +1,10 @@
+# Compiled/binary PDK artifacts — mark as binary so git skips end-of-line
+# normalization, diff, and merge on them. (This repo does not use Git LFS;
+# the largest artifact is ~39 MB, well under GitHub's per-file limit.)
+*.db      binary
+*.gds     binary
+*.nxtgrd  binary
+*.tch     binary
+
+# Everything else (LEF, Liberty .lib, ITF, ICT, CDL, model cards, tech files,
+# docs) is plain text and handled normally by git.

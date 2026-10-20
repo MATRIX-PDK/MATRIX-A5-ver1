@@ -1,0 +1,5 @@
+.subckt gtA5_cfet_5t_32_inv_x3_svt A Y VDD VSS
+*.PININFO A:I Y:O VDD:B VSS:B
+MM0 Y A VDD VDD pmos_svt WGAA=0.032u L=0.012u M=3
+MM1 Y A VSS VSS nmos_svt WGAA=0.032u L=0.012u M=3
+.ends gtA5_cfet_5t_32_inv_x3_svt

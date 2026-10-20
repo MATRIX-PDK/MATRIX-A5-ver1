@@ -1,0 +1,72 @@
+# PDK: gtA5_cfet_20_filler_x<N>_svt (filler family)
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+UNITS
+  DATABASE MICRONS 2000 ;
+END UNITS
+MANUFACTURINGGRID 0.0005 ;
+
+MACRO gtA5_cfet_20_filler_x1_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x1_svt 0 0 ;
+  SIZE 0.039 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x1_svt
+
+MACRO gtA5_cfet_20_filler_x2_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x2_svt 0 0 ;
+  SIZE 0.078 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x2_svt
+
+MACRO gtA5_cfet_20_filler_x3_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x3_svt 0 0 ;
+  SIZE 0.117 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x3_svt
+
+MACRO gtA5_cfet_20_filler_x4_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x4_svt 0 0 ;
+  SIZE 0.156 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x4_svt
+
+MACRO gtA5_cfet_20_filler_x6_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x6_svt 0 0 ;
+  SIZE 0.234 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x6_svt
+
+MACRO gtA5_cfet_20_filler_x8_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x8_svt 0 0 ;
+  SIZE 0.312 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x8_svt
+
+MACRO gtA5_cfet_20_filler_x10_svt
+  CLASS CORE SPACER ;
+  ORIGIN 0 0 ;
+  FOREIGN gtA5_cfet_20_filler_x10_svt 0 0 ;
+  SIZE 0.39 BY 0.072 ;
+  SYMMETRY X Y ;
+  SITE CORESITE_20 ;
+END gtA5_cfet_20_filler_x10_svt

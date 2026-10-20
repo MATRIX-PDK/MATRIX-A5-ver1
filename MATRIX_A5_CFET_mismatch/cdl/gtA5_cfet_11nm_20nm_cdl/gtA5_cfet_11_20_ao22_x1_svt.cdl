@@ -1,0 +1,13 @@
+.subckt gtA5_cfet_11_20_ao22_x1_svt A1 A2 B1 B2 Y VDD VSS
+*.PININFO A1:I A2:I B1:I B2:I Y:O VDD:B VSS:B
+MM28 net69 B1 VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM18 net41 A1 VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM27 Y net67 VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM19 net67 B2 net69 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM17 net67 A2 net41 VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM26 Y net67 VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM15 net67 B2 net64 VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM14 net67 B1 net64 VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM29 net64 A2 VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM16 net64 A1 VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+.ends gtA5_cfet_11_20_ao22_x1_svt

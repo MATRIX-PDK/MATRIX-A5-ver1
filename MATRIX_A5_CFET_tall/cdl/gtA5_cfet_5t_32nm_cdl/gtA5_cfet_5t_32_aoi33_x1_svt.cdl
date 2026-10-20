@@ -1,0 +1,15 @@
+.subckt gtA5_cfet_5t_32_aoi33_x1_svt A1 A2 A3 B1 B2 B3 Y VDD VSS
+*.PININFO A1:I A2:I A3:I B1:I B2:I B3:I Y:O VDD:B VSS:B
+MM37 Y B3 net92 VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM34 Y B2 net92 VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM14 Y B1 net92 VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM31 net92 A3 VDD VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM29 net92 A2 VDD VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM16 net92 A1 VDD VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM36 net110 B3 VSS VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM18 net98 A3 VSS VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM35 net106 B2 net110 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM32 net97 A2 net98 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM19 Y B1 net106 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM17 Y A1 net97 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+.ends gtA5_cfet_5t_32_aoi33_x1_svt

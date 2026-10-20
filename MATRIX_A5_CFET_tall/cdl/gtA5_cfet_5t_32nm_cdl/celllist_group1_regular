@@ -1,0 +1,63 @@
+# =====================================================================
+# celllist_group1_regular  --  GTA5_CFET_5t_32_ver2_acc cell-grouping (2026-06-13)
+#
+# GROUP 1 = "regular characterization" cells (max series-stack height <= 2,
+# no sequential feedback). These are expected to converge in plain Spectre
+# with NO cmin / NO APS -- i.e. BYTE-FOR-BYTE the same recipe the 4-track
+# PDKs (11 / 20 / 11_20) use -> physically correct caps, directly comparable.
+#
+# Partition rule (topological PREDICTION; finalize EMPIRICALLY -- see note):
+#   - inverters / buffers              -> 1-high
+#   - nand2/nor2/and2/or2              -> 2-high
+#   - *21 / *22 AOI/OAI/AO/OA          -> 2-high
+#   - xor2/xnor2/ha                    -> 2-high (verify; pass-logic internal nodes)
+#
+# EMPIRICAL FINALIZATION (authoritative): run plain Spectre (no cmin/APS) over
+# all 66 cells once; every cell that PASSES belongs here. Move any that throw
+# SPECTRE-16928/16192 into celllist_group2_hard. The list below is the
+# expected-pass set; trust the run over the prediction.
+#
+# 42 cells (dff_x1 has no schematic; ao22_x1 excluded for the GDS A2 open).
+# =====================================================================
+gtA5_cfet_5t_32_inv_x1_svt
+gtA5_cfet_5t_32_inv_x2_svt
+gtA5_cfet_5t_32_inv_x3_svt
+gtA5_cfet_5t_32_inv_x4_svt
+gtA5_cfet_5t_32_inv_x6_svt
+gtA5_cfet_5t_32_inv_x8_svt
+gtA5_cfet_5t_32_inv_x10_svt
+gtA5_cfet_5t_32_inv_x12_svt
+gtA5_cfet_5t_32_buf_x1_svt
+gtA5_cfet_5t_32_buf_x2_svt
+gtA5_cfet_5t_32_buf_x3_svt
+gtA5_cfet_5t_32_buf_x4_svt
+gtA5_cfet_5t_32_buf_x6_svt
+gtA5_cfet_5t_32_buf_x8_svt
+gtA5_cfet_5t_32_buf_x10_svt
+gtA5_cfet_5t_32_buf_x12_svt
+gtA5_cfet_5t_32_nand2_x1_svt
+gtA5_cfet_5t_32_nand2_x2_svt
+gtA5_cfet_5t_32_nand2_x3_svt
+gtA5_cfet_5t_32_nand2_x4_svt
+gtA5_cfet_5t_32_nor2_x1_svt
+gtA5_cfet_5t_32_nor2_x2_svt
+gtA5_cfet_5t_32_nor2_x3_svt
+gtA5_cfet_5t_32_nor2_x4_svt
+gtA5_cfet_5t_32_and2_x1_svt
+gtA5_cfet_5t_32_and2_x2_svt
+gtA5_cfet_5t_32_and2_x3_svt
+gtA5_cfet_5t_32_and2_x4_svt
+gtA5_cfet_5t_32_or2_x1_svt
+gtA5_cfet_5t_32_or2_x2_svt
+gtA5_cfet_5t_32_or2_x3_svt
+gtA5_cfet_5t_32_or2_x4_svt
+gtA5_cfet_5t_32_aoi21_x1_svt
+gtA5_cfet_5t_32_aoi22_x1_svt
+gtA5_cfet_5t_32_oai21_x1_svt
+gtA5_cfet_5t_32_oai22_x1_svt
+gtA5_cfet_5t_32_ao21_x1_svt
+gtA5_cfet_5t_32_oa21_x1_svt
+gtA5_cfet_5t_32_oa22_x1_svt
+gtA5_cfet_5t_32_xor2_x1_svt
+gtA5_cfet_5t_32_xnor2_x1_svt
+gtA5_cfet_5t_32_ha_x1_svt

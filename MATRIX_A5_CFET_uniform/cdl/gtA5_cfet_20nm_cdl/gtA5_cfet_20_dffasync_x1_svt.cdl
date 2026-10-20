@@ -1,0 +1,53 @@
+.subckt gtA5_cfet_20_dffasync_x1_svt CLK D Q RESETN SETN VDD VSS
+*.PININFO CLK:I D:I Q:O RESETN:I SETN:I VDD:B VSS:B
+
+* --- XI5: gtA5_ns_nand3_x1_rvt (A=net13, B=Q, C=RESETN, Y=net21)
+MM50 net21 net13  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM51 net21 Q      VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM52 net21 RESETN VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM53 N5_1  net13  VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM54 N5_2  Q      N5_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM55 net21 RESETN N5_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+* --- XI4: gtA5_ns_nand3_x1_rvt (A=net5, B=SETN, C=net21, Y=Q)
+MM40 Q     net5  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM41 Q     SETN  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM42 Q     net21 VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM43 N4_1  net5  VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM44 N4_2  SETN  N4_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM45 Q     net21 N4_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+* --- XI3: gtA5_ns_nand3_x1_rvt (A=CLK, B=net9, C=net5, Y=net13)
+MM30 net13 CLK   VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM31 net13 net9  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM32 net13 net5  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM33 N3_1  CLK   VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM34 N3_2  net9  N3_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM35 net13 net5  N3_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+* --- XI2: gtA5_ns_nand3_x1_rvt (A=net13, B=D, C=RESETN, Y=net9)
+MM20 net9  net13 VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM21 net9  D     VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM22 net9  RESETN VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM23 N2_1  net13 VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM24 N2_2  D     N2_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM25 net9  RESETN N2_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+* --- XI1: gtA5_ns_nand3_x1_rvt (A=RESETN, B=net7, C=CLK, Y=net5)
+MM10 net5  RESETN VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM11 net5  net7   VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM12 net5  CLK    VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM13 N1_1  RESETN VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM14 N1_2  net7   N1_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM15 net5  CLK    N1_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+* --- XI0: gtA5_ns_nand3_x1_rvt (A=SETN, B=net9, C=net5, Y=net7)
+MM00 net7  SETN  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM01 net7  net9  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM02 net7  net5  VDD VDD pmos_svt WGAA=0.020u L=0.012u M=1
+MM03 N0_1  SETN  VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM04 N0_2  net9  N0_1 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM05 net7  net5  N0_2 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+
+.ends gtA5_cfet_20_dffasync_x1_svt
+

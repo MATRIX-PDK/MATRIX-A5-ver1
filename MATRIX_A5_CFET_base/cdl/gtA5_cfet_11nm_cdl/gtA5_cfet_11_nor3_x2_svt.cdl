@@ -1,0 +1,9 @@
+.subckt gtA5_cfet_11_nor3_x2_svt A B C Y VDD VSS
+*.PININFO A:I B:I C:I Y:O VDD:B VSS:B
+MM12 Y C VSS VSS nmos_svt WGAA=0.011u L=0.012u M=2
+MM11 Y B VSS VSS nmos_svt WGAA=0.011u L=0.012u M=2
+MM10 Y A VSS VSS nmos_svt WGAA=0.011u L=0.012u M=2
+MM9 Y C net7 VDD pmos_svt WGAA=0.011u L=0.012u M=2
+MM8 net7 B net5 VDD pmos_svt WGAA=0.011u L=0.012u M=2
+MM7 net5 A VDD VDD pmos_svt WGAA=0.011u L=0.012u M=2
+.ends gtA5_cfet_11_nor3_x2_svt

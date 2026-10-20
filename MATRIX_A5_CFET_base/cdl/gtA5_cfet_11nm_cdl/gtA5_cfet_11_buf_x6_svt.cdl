@@ -1,0 +1,7 @@
+.subckt gtA5_cfet_11_buf_x6_svt A Y VDD VSS
+*.PININFO A:I Y:O VDD:B VSS:B
+MM2 Y net13 VDD VDD pmos_svt WGAA=0.011u L=0.012u M=6
+MM0 net13 A VDD VDD pmos_svt WGAA=0.011u L=0.012u M=2
+MM3 Y net13 VSS VSS nmos_svt WGAA=0.011u L=0.012u M=6
+MM1 net13 A VSS VSS nmos_svt WGAA=0.011u L=0.012u M=2
+.ends gtA5_cfet_11_buf_x6_svt

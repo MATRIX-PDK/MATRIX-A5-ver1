@@ -1,0 +1,883 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+  LAYER LEF58_TYPE STRING ;
+  LAYER LEF58_SPACING STRING ;
+  LAYER LEF58_WIDTH STRING ;
+END PROPERTYDEFINITIONS
+
+UNITS
+  DATABASE MICRONS 2000 ;
+END UNITS
+MANUFACTURINGGRID 0.0005 ;
+LAYER OVERLAP
+  TYPE OVERLAP ;
+END OVERLAP
+
+# =====================================================================
+# MASTERSLICE — FEOL well/diffusion/poly/select/cuts
+#  CFET has TWO device tiers; layers with a "2" suffix belong to the
+#  upper tier (e.g. nFET-over-pFET stack, GATE2 = upper-tier poly).
+# =====================================================================
+
+LAYER NWELL
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE NWELL ;" ;
+  PROPERTY LEF58_SPACING "SPACING 0.039 ;" ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.039 ;" ;
+END NWELL
+
+LAYER ACT
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE DIFFUSION ;" ;
+  PROPERTY LEF58_SPACING "SPACING 0.03 ;" ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.011 ;" ;
+END ACT
+
+LAYER ACT2
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE DIFFUSION ;" ;
+  PROPERTY LEF58_SPACING "SPACING 0.03 ;" ;
+  PROPERTY LEF58_WIDTH "WIDTH 0.011 ;" ;
+END ACT2
+
+LAYER GATE
+  TYPE MASTERSLICE ;
+END GATE
+
+LAYER GATE2
+  TYPE MASTERSLICE ;
+END GATE2
+
+LAYER DUMMY
+  TYPE MASTERSLICE ;
+END DUMMY
+
+LAYER GCUT
+  TYPE MASTERSLICE ;
+END GCUT
+
+LAYER NSEL
+  TYPE MASTERSLICE ;
+END NSEL
+
+LAYER PSEL
+  TYPE MASTERSLICE ;
+END PSEL
+
+LAYER SDCON
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE MEOL ;" ;
+END SDCON
+
+LAYER SDCON2
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE MEOL ;" ;
+END SDCON2
+
+LAYER GSMERGE
+  TYPE MASTERSLICE ;
+  PROPERTY LEF58_TYPE "TYPE MEOL ;" ;
+END GSMERGE
+
+LAYER FNCut
+  TYPE MASTERSLICE ;
+END FNCut
+
+# =====================================================================
+# CUT — FEOL via/contact layers
+#  Two-tier device adds the "2" / "12" cuts:
+#    VG12  — gate via between tier-1 GATE and tier-2 GATE2
+#    VG2   — gate-to-M0 via on the upper tier
+#    VSD2  — S/D contact via on the upper tier
+#    VBPR2 — upper-tier S/D to BPR via
+# =====================================================================
+
+LAYER VSD
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VSD
+
+LAYER VSD2
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VSD2
+
+LAYER VG
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VG
+
+LAYER VG2
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VG2
+
+LAYER VG12
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VG12
+
+LAYER VBPR2
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VBPR2
+
+# =====================================================================
+# Backside ROUTING — BSPDN stack (package -> silicon)
+# Process-independent BSPDN geometry.
+# =====================================================================
+
+LAYER BSM3
+  TYPE ROUTING ;
+  SPACING 1.0 ;
+  WIDTH 1.0 ;
+  PITCH 2.0 ;
+  DIRECTION VERTICAL  ;
+  OFFSET 1.0 ;
+END BSM3
+
+LAYER BSV2
+  TYPE CUT ;
+  SPACING 0.4 ;
+  WIDTH 0.4 ;
+END BSV2
+
+LAYER BSM2
+  TYPE ROUTING ;
+  SPACING 1.1 ;
+  WIDTH 0.5 ;
+  PITCH 1.6 ;
+  DIRECTION HORIZONTAL  ;
+  OFFSET 0.8 ;
+END BSM2
+
+LAYER BSV1
+  TYPE CUT ;
+  SPACING 0.2 ;
+  WIDTH 0.2 ;
+END BSV1
+
+LAYER BSM1
+  TYPE ROUTING ;
+  SPACING 0.8 ;
+  WIDTH 0.2 ;
+  PITCH 1.0 ;
+  DIRECTION VERTICAL  ;
+  OFFSET 0.5 ;
+END BSM1
+
+LAYER TSV
+  TYPE CUT ;
+  SPACING 0.02 ;
+  WIDTH 0.02 ;
+END TSV
+
+# =====================================================================
+# BPR — buried power rail, std-cell PG layer
+#  CFET 4-track cell height = 0.072 µm. One BPR per std-cell row, therefore:
+#    PITCH   = cell_height           = 0.072
+#    WIDTH   = 0.024
+#    SPACING = PITCH - WIDTH         = 0.048
+#    DIRECTION HORIZONTAL (row-direction; horizontal cells)
+# =====================================================================
+
+LAYER BPR
+  TYPE ROUTING ;
+  SPACING 0.048 ;
+  WIDTH 0.024 ;
+  PITCH 0.072 ;
+  DIRECTION HORIZONTAL  ;
+  OFFSET 0 ;
+END BPR
+
+LAYER VBPR
+  TYPE CUT ;
+  SPACING 0.012 ;
+  WIDTH 0.012 ;
+END VBPR
+
+# =====================================================================
+# Frontside ROUTING — M0..M13 + V0..V13 + RDL
+# Process-independent BEOL geometry.
+# M1/M2 SPACING + PITCH consistent (PITCH = WIDTH + SPACING).
+# M2 mirrors M0 (HORIZONTAL, 9 nm wire, 16 nm pitch).
+# =====================================================================
+
+LAYER M0
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.016 0.016 ;
+  WIDTH 0.009 ;
+  OFFSET 0.008 0.008 ;
+  AREA 0.000216 ;
+  SPACING 0.007 ;
+END M0
+
+LAYER V0
+  TYPE CUT ;
+  SPACING 0.007 ;
+  WIDTH 0.009 ;
+END V0
+
+LAYER M1
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.026 0.026 ;
+  WIDTH 0.016 ;
+  OFFSET 0.013 0.013 ;
+  AREA 0.000448 ;
+  SPACING 0.010 ;
+END M1
+
+LAYER V1
+  TYPE CUT ;
+  SPACING 0.007 ;
+  WIDTH 0.009 ;
+END V1
+
+LAYER M2
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.016 0.016 ;
+  WIDTH 0.009 ;
+  OFFSET 0.008 0.008 ;
+  AREA 0.000216 ;
+  SPACING 0.007 ;
+END M2
+
+LAYER V2
+  TYPE CUT ;
+  SPACING 0.007 ;
+  WIDTH 0.009 ;
+END V2
+
+LAYER M3
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.032 0.032 ;
+  WIDTH 0.016 ;
+  OFFSET 0.016 0.016 ;
+  AREA 0.000448 ;
+  SPACING 0.016 ;
+END M3
+
+LAYER V3
+  TYPE CUT ;
+  SPACING 0.014 ;
+  WIDTH 0.014 ;
+END V3
+
+LAYER M4
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.042 0.042 ;
+  WIDTH 0.021 ;
+  OFFSET 0.021 0.021 ;
+  AREA 0.000693 ;
+  SPACING 0.021 ;
+END M4
+
+LAYER V4
+  TYPE CUT ;
+  SPACING 0.021 ;
+  WIDTH 0.021 ;
+END V4
+
+LAYER M5
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.042 0.042 ;
+  WIDTH 0.021 ;
+  OFFSET 0.021 0.021 ;
+  AREA 0.000693 ;
+  SPACING 0.021 ;
+END M5
+
+LAYER V5
+  TYPE CUT ;
+  SPACING 0.021 ;
+  WIDTH 0.021 ;
+END V5
+
+LAYER M6
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.076 0.076 ;
+  WIDTH 0.038 ;
+  OFFSET 0.038 0.038 ;
+  AREA 0.002052 ;
+  SPACING 0.038 ;
+END M6
+
+LAYER V6
+  TYPE CUT ;
+  SPACING 0.038 ;
+  WIDTH 0.038 ;
+END V6
+
+LAYER M7
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.076 0.076 ;
+  WIDTH 0.038 ;
+  OFFSET 0.038 0.038 ;
+  AREA 0.002052 ;
+  SPACING 0.038 ;
+END M7
+
+LAYER V7
+  TYPE CUT ;
+  SPACING 0.038 ;
+  WIDTH 0.038 ;
+END V7
+
+LAYER M8
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.076 0.076 ;
+  WIDTH 0.038 ;
+  OFFSET 0.038 0.038 ;
+  AREA 0.002052 ;
+  SPACING 0.038 ;
+END M8
+
+LAYER V8
+  TYPE CUT ;
+  SPACING 0.038 ;
+  WIDTH 0.038 ;
+END V8
+
+LAYER M9
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.076 0.076 ;
+  WIDTH 0.038 ;
+  OFFSET 0.038 0.038 ;
+  AREA 0.002204 ;
+  SPACING 0.038 ;
+END M9
+
+LAYER V9
+  TYPE CUT ;
+  SPACING 0.038 ;
+  WIDTH 0.038 ;
+END V9
+
+LAYER M10
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.112 0.112 ;
+  WIDTH 0.056 ;
+  OFFSET 0.056 0.056 ;
+  AREA 0.00448 ;
+  SPACING 0.056 ;
+END M10
+
+LAYER V10
+  TYPE CUT ;
+  SPACING 0.056 ;
+  WIDTH 0.056 ;
+END V10
+
+LAYER M11
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.112 0.112 ;
+  WIDTH 0.056 ;
+  OFFSET 0.056 0.056 ;
+  AREA 0.00448 ;
+  SPACING 0.056 ;
+END M11
+
+LAYER V11
+  TYPE CUT ;
+  SPACING 0.056 ;
+  WIDTH 0.056 ;
+END V11
+
+LAYER M12
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 0.72 0.72 ;
+  WIDTH 0.36 ;
+  OFFSET 0.36 0.36 ;
+  AREA 0.1944 ;
+  SPACING 0.36 ;
+END M12
+
+LAYER V12
+  TYPE CUT ;
+  SPACING 0.056 ;
+  WIDTH 0.056 ;
+END V12
+
+LAYER M13
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 0.72 0.72 ;
+  WIDTH 0.36 ;
+  OFFSET 0.36 0.36 ;
+  AREA 0.1944 ;
+  SPACING 0.36 ;
+END M13
+
+LAYER V13
+  TYPE CUT ;
+  SPACING 0.056 ;
+  WIDTH 0.056 ;
+END V13
+
+LAYER RDL
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 3.2 3.2 ;
+  WIDTH 1.6 ;
+  OFFSET 1.6 1.6 ;
+  AREA 3.84 ;
+  SPACING 1.6 ;
+END RDL
+
+# =====================================================================
+# VIA <name> DEFAULT — fixed via masters
+# Required for Innovus power-rail / fixed-via instantiation.
+# =====================================================================
+
+VIA VTSV_0 DEFAULT
+  LAYER BPR ;
+    RECT -0.045 -0.012 0.045 0.012 ;
+  LAYER TSV ;
+    RECT -0.045 -0.045 0.045 0.045 ;
+  LAYER BSM1 ;
+    RECT -0.100 -0.045 0.100 0.045 ;
+END VTSV_0
+
+VIA VBSV1_0 DEFAULT
+  LAYER BSV1 ;
+    RECT -0.100 -0.100 0.100 0.100 ;
+  LAYER BSM1 ;
+    RECT -0.100 -0.100 0.100 0.100 ;
+  LAYER BSM2 ;
+    RECT -0.100 -0.250 0.100 0.250 ;
+END VBSV1_0
+
+VIA VBSV2_0 DEFAULT
+  LAYER BSV2 ;
+    RECT -0.250 -0.250 0.250 0.250 ;
+  LAYER BSM2 ;
+    RECT -0.250 -0.250 0.250 0.250 ;
+  LAYER BSM3 ;
+    RECT -0.500 -0.250 0.500 0.250 ;
+END VBSV2_0
+
+# VBPR_0 — "blessed" BPR↔M0 via macro REQUIRED BY INNOVUS NanoRoute.
+# Physically, VBPR connects SDCON↔BPR (not M0↔BPR); the chip-level path
+# from BPR to M0 actually goes BPR→VBPR→SDCON→VSD→M0 (two cuts) and is
+# drawn inside each std-cell GDS. We do NOT need Innovus to stitch
+# BPR↔M0 in empty area (BSPDN supplies power via TSV→BPR, cells pick up
+# internally, M0 grid is continuous between cells). HOWEVER: NanoRoute
+# walks the routable-layer stack pair-by-pair and errors NRDB-158
+# "Missing vias from LAYER BPR to LAYER M0 in RULE LEF_DEFAULT" if there
+# is no via between adjacent routable layers. So this macro must be
+# present as a "logical abstraction" of the in-cell stack even though
+# Innovus never actually stamps it during routing in empty area. Do not remove.
+VIA VBPR_0 DEFAULT
+  LAYER VBPR ;
+    RECT -0.006 -0.006 0.006 0.006 ;
+  LAYER BPR ;
+    RECT -0.011 -0.006 0.011 0.006 ;
+  LAYER M0 ;
+    RECT -0.011 -0.006 0.011 0.006 ;
+END VBPR_0
+
+VIA via13 DEFAULT
+  LAYER V13 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+  LAYER M13 ;
+    RECT -0.028 -0.04 0.028 0.04 ;
+  LAYER RDL ;
+    RECT -0.04 -0.028 0.04 0.028 ;
+END via13
+
+VIA via12_13 DEFAULT
+  LAYER V12 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+  LAYER M12 ;
+    RECT -0.04 -0.028 0.04 0.028 ;
+  LAYER M13 ;
+    RECT -0.028 -0.04 0.028 0.04 ;
+END via12_13
+
+VIA via11_12 DEFAULT
+  LAYER V11 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+  LAYER M11 ;
+    RECT -0.028 -0.04 0.028 0.04 ;
+  LAYER M12 ;
+    RECT -0.04 -0.028 0.04 0.028 ;
+END via11_12
+
+VIA via10_11 DEFAULT
+  LAYER V10 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+  LAYER M10 ;
+    RECT -0.04 -0.028 0.04 0.028 ;
+  LAYER M11 ;
+    RECT -0.028 -0.04 0.028 0.04 ;
+END via10_11
+
+VIA via9_10 DEFAULT
+  LAYER V9 ;
+    RECT -0.019 -0.028 0.019 0.028 ;
+  LAYER M9 ;
+    RECT -0.019 -0.038 0.019 0.038 ;
+  LAYER M10 ;
+    RECT -0.029 -0.028 0.029 0.028 ;
+END via9_10
+
+VIA via89 DEFAULT
+  LAYER V8 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+  LAYER M8 ;
+    RECT -0.027 -0.019 0.027 0.019 ;
+  LAYER M9 ;
+    RECT -0.019 -0.027 0.019 0.027 ;
+END via89
+
+VIA via78 DEFAULT
+  LAYER V7 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+  LAYER M7 ;
+    RECT -0.019 -0.027 0.019 0.027 ;
+  LAYER M8 ;
+    RECT -0.027 -0.019 0.027 0.019 ;
+END via78
+
+VIA via67 DEFAULT
+  LAYER V6 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+  LAYER M6 ;
+    RECT -0.027 -0.019 0.027 0.019 ;
+  LAYER M7 ;
+    RECT -0.019 -0.027 0.019 0.027 ;
+END via67
+
+VIA via56 DEFAULT
+  LAYER V5 ;
+    RECT -0.0105 -0.019 0.0105 0.019 ;
+  LAYER M5 ;
+    RECT -0.0105 -0.025 0.0105 0.025 ;
+  LAYER M6 ;
+    RECT -0.0165 -0.019 0.0165 0.019 ;
+END via56
+
+VIA via45 DEFAULT
+  LAYER V4 ;
+    RECT -0.0105 -0.0105 0.0105 0.0105 ;
+  LAYER M4 ;
+    RECT -0.0155 -0.0105 0.0155 0.0105 ;
+  LAYER M5 ;
+    RECT -0.0105 -0.0155 0.0105 0.0155 ;
+END via45
+
+VIA via34 DEFAULT
+  LAYER V3 ;
+    RECT -0.007 -0.0105 0.007 0.0105 ;
+  LAYER M3 ;
+    RECT -0.008 -0.0145 0.008 0.0145 ;
+  LAYER M4 ;
+    RECT -0.011 -0.0105 0.011 0.0105 ;
+END via34
+
+VIA via23 DEFAULT
+  LAYER V2 ;
+    RECT -0.007 -0.0045 0.007 0.0045 ;
+  LAYER M2 ;
+    RECT -0.011 -0.0045 0.011 0.0045 ;
+  LAYER M3 ;
+    RECT -0.008 -0.01 0.008 0.01 ;
+END via23
+
+VIA via12 DEFAULT
+  LAYER V1 ;
+    RECT -0.0055 -0.0045 0.0055 0.0045 ;
+  LAYER M1 ;
+    RECT -0.008 -0.014 0.008 0.014 ;
+  LAYER M2 ;
+    RECT -0.012 -0.0045 0.012 0.0045 ;
+END via12
+
+VIA via01 DEFAULT
+  LAYER V0 ;
+    RECT -0.0045 -0.0045 0.0045 0.0045 ;
+  LAYER M0 ;
+    RECT -0.014 -0.0045 0.014 0.0045 ;
+  LAYER M1 ;
+    RECT -0.008 -0.014 0.008 0.014 ;
+END via01
+
+# =====================================================================
+# VIARULE <name> GENERATE — point + array via generators
+# =====================================================================
+
+VIARULE ViaTSVArray GENERATE DEFAULT
+  LAYER BPR ;
+    ENCLOSURE 0.004 0 ;
+  LAYER BSM1 ;
+    ENCLOSURE 0.004 0 ;
+  LAYER TSV ;
+    RECT -0.010 -0.010 0.010 0.010 ;
+    SPACING 0.020 BY 0.020 ;
+END ViaTSVArray
+
+VIARULE ViaBSV1Array GENERATE
+  LAYER BSM1 ;
+    ENCLOSURE 0 0 ;
+  LAYER BSM2 ;
+    ENCLOSURE 0 0 ;
+  LAYER BSV1 ;
+    RECT -0.075 -0.075 0.075 0.075 ;
+    SPACING 0.30 BY 0.30 ;
+END ViaBSV1Array
+
+VIARULE ViaBSV2Array GENERATE
+  LAYER BSM2 ;
+    ENCLOSURE 0 0 ;
+  LAYER BSM3 ;
+    ENCLOSURE 0 0 ;
+  LAYER BSV2 ;
+    RECT -0.125 -0.125 0.125 0.125 ;
+    SPACING 0.50 BY 0.50 ;
+END ViaBSV2Array
+
+VIARULE via13 GENERATE DEFAULT
+  LAYER M13 ;
+    ENCLOSURE 0 0.012 ;
+  LAYER RDL ;
+    ENCLOSURE 0.012 0 ;
+  LAYER V13 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+    SPACING 0.112 BY 0.112 ;
+END via13
+
+VIARULE via12_13 GENERATE DEFAULT
+  LAYER M12 ;
+    ENCLOSURE 0.012 0 ;
+  LAYER M13 ;
+    ENCLOSURE 0 0.012 ;
+  LAYER V12 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+    SPACING 0.112 BY 0.112 ;
+END via12_13
+
+VIARULE via11_12 GENERATE DEFAULT
+  LAYER M11 ;
+    ENCLOSURE 0 0.012 ;
+  LAYER M12 ;
+    ENCLOSURE 0.012 0 ;
+  LAYER V11 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+    SPACING 0.112 BY 0.112 ;
+END via11_12
+
+VIARULE via10_11 GENERATE DEFAULT
+  LAYER M10 ;
+    ENCLOSURE 0.012 0 ;
+  LAYER M11 ;
+    ENCLOSURE 0 0.012 ;
+  LAYER V10 ;
+    RECT -0.028 -0.028 0.028 0.028 ;
+    SPACING 0.112 BY 0.112 ;
+END via10_11
+
+VIARULE via9_10 GENERATE DEFAULT
+  LAYER M9 ;
+    ENCLOSURE 0 0.01 ;
+  LAYER M10 ;
+    ENCLOSURE 0.01 0 ;
+  LAYER V9 ;
+    RECT -0.019 -0.028 0.019 0.028 ;
+    SPACING 0.076 BY 0.112 ;
+END via9_10
+
+VIARULE via89 GENERATE DEFAULT
+  LAYER M8 ;
+    ENCLOSURE 0.008 0 ;
+  LAYER M9 ;
+    ENCLOSURE 0 0.008 ;
+  LAYER V8 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+    SPACING 0.076 BY 0.076 ;
+END via89
+
+VIARULE via78 GENERATE DEFAULT
+  LAYER M7 ;
+    ENCLOSURE 0 0.008 ;
+  LAYER M8 ;
+    ENCLOSURE 0.008 0 ;
+  LAYER V7 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+    SPACING 0.076 BY 0.076 ;
+END via78
+
+VIARULE via67 GENERATE DEFAULT
+  LAYER M6 ;
+    ENCLOSURE 0.008 0 ;
+  LAYER M7 ;
+    ENCLOSURE 0 0.008 ;
+  LAYER V6 ;
+    RECT -0.019 -0.019 0.019 0.019 ;
+    SPACING 0.076 BY 0.076 ;
+END via67
+
+VIARULE via56 GENERATE DEFAULT
+  LAYER M5 ;
+    ENCLOSURE 0 0.006 ;
+  LAYER M6 ;
+    ENCLOSURE 0.006 0 ;
+  LAYER V5 ;
+    RECT -0.0105 -0.019 0.0105 0.019 ;
+    SPACING 0.042 BY 0.076 ;
+END via56
+
+VIARULE via45 GENERATE DEFAULT
+  LAYER M4 ;
+    ENCLOSURE 0.005 0 ;
+  LAYER M5 ;
+    ENCLOSURE 0 0.005 ;
+  LAYER V4 ;
+    RECT -0.0105 -0.0105 0.0105 0.0105 ;
+    SPACING 0.042 BY 0.042 ;
+END via45
+
+VIARULE via34 GENERATE DEFAULT
+  LAYER M3 ;
+    ENCLOSURE 0.001 0.004 ;
+  LAYER M4 ;
+    ENCLOSURE 0.004 0 ;
+  LAYER V3 ;
+    RECT -0.007 -0.0105 0.007 0.0105 ;
+    SPACING 0.028 BY 0.042 ;
+END via34
+
+VIARULE via23 GENERATE DEFAULT
+  LAYER M2 ;
+    ENCLOSURE 0.004 0 ;
+  LAYER M3 ;
+    ENCLOSURE 0.001 0.004 ;
+  LAYER V2 ;
+    RECT -0.007 -0.0045 0.007 0.0045 ;
+    SPACING 0.028 BY 0.024 ;
+END via23
+
+VIARULE via12 GENERATE DEFAULT
+  LAYER M1 ;
+    ENCLOSURE 0.0025 0.0085 ;
+  LAYER M2 ;
+    ENCLOSURE 0.0065 0 ;
+  LAYER V1 ;
+    RECT -0.0055 -0.0045 0.0055 0.0045 ;
+    SPACING 0.022 BY 0.022 ;
+END via12
+
+VIARULE via01 GENERATE DEFAULT
+  LAYER M0 ;
+    ENCLOSURE 0.0095 0 ;
+  LAYER M1 ;
+    ENCLOSURE 0.0035 0.0095 ;
+  LAYER V0 ;
+    RECT -0.0045 -0.0045 0.0045 0.0045 ;
+    SPACING 0.018 BY 0.018 ;
+END via01
+
+# FEOL contact-array generators (geometry from the Virtuoso techfile standardViaDefs).
+
+VIARULE polyCont GENERATE DEFAULT
+  LAYER GATE ;
+    ENCLOSURE 0 0.004 ;
+  LAYER M0 ;
+    ENCLOSURE 0.004 0 ;
+  LAYER VG ;
+    RECT -0.0045 -0.0045 0.0045 0.0045 ;
+    SPACING 0.036 BY 0.021 ;
+END polyCont
+
+VIARULE diffCont GENERATE DEFAULT
+  LAYER SDCON ;
+    ENCLOSURE 0.001 0 ;
+  LAYER M0 ;
+    ENCLOSURE 0.004 0 ;
+  LAYER VSD ;
+    RECT -0.0045 -0.0045 0.0045 0.0045 ;
+    SPACING 0.038 BY 0.021 ;
+END diffCont
+
+# vbprCont — BPR↔M0 generate VIARULE companion to VIA VBPR_0 DEFAULT.
+# Same reasoning: Innovus's NanoRoute requires a via-generate rule
+# between every adjacent pair of routable layers (BPR + M0) or it
+# errors NRDB-158 at routing start. This is a "logical abstraction" of
+# the in-cell BPR→VBPR→SDCON→VSD→M0 stack; Innovus uses it for
+# connectivity bookkeeping but does not stamp BPR↔M0 cut arrays in
+# empty area during power-stripe routing (BSPDN handles power via
+# TSV→BPR; M0 power grid is continuous between cell rows). Do not remove.
+VIARULE vbprCont GENERATE DEFAULT
+  LAYER BPR ;
+    ENCLOSURE 0.003 0 ;
+  LAYER M0 ;
+    ENCLOSURE 0.005 0 ;
+  LAYER VBPR ;
+    RECT -0.006 -0.006 0.006 0.006 ;
+    SPACING 0.024 BY 0.024 ;
+END vbprCont
+
+VIARULE viaTSV GENERATE DEFAULT
+  LAYER BPR ;
+    ENCLOSURE 0 0 ;
+  LAYER BSM1 ;
+    ENCLOSURE 0.015 0.015 ;
+  LAYER TSV ;
+    RECT -0.045 -0.045 0.045 0.045 ;
+    SPACING 0.18 BY 0.18 ;
+END viaTSV
+
+VIARULE viaBSV1 GENERATE DEFAULT
+  LAYER BSM1 ;
+    ENCLOSURE 0.05 0.05 ;
+  LAYER BSM2 ;
+    ENCLOSURE 0.15 0.15 ;
+  LAYER BSV1 ;
+    RECT -0.1 -0.1 0.1 0.1 ;
+    SPACING 0.4 BY 0.4 ;
+END viaBSV1
+
+VIARULE viaBSV2 GENERATE DEFAULT
+  LAYER BSM2 ;
+    ENCLOSURE 0.25 0.25 ;
+  LAYER BSM3 ;
+    ENCLOSURE 0.75 0.75 ;
+  LAYER BSV2 ;
+    RECT -0.25 -0.25 0.25 0.25 ;
+    SPACING 1 BY 1 ;
+END viaBSV2
+
+# =====================================================================
+# SITE — std-cell row footprint
+# CFET 4-track cell height = 0.072 µm (vs NS 0.096 = 6-track NS standard).
+# One BPR per row -> BPR PITCH = SITE Y.
+# =====================================================================
+
+SITE CoreSite
+  CLASS CORE ;
+  SYMMETRY Y ;
+  SIZE 0.039 BY 0.072 ;
+END CoreSite
+
+END LIBRARY

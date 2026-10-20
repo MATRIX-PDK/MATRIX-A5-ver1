@@ -1,0 +1,27 @@
+.subckt gtA5_cfet_11_dff_x1_svt D CK Q VDD VSS
+*.PININFO D:I CK:I Q:O VDD:B VSS:B
+MM0  DINT  D    VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM1  DINTP D    VDD VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM2  DINT  CKB  N0  VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM3  DINTP CKBB N0  VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM4  N0    CKBB N1  VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM5  N0    CKB  N2  VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM6  N1    N3   VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM7  N2    N3   VDD VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM8  VDD   N0   N3  VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM9  VSS   N0   N3  VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM10 N3    CKBB QBB VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM11 N3    CKB  QBB VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM12 N4    CKB  QBB VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM13 N5    CKBB QBB VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM14 VDD   QBB  QB  VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM15 VSS   QBB  QB  VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM16 N4    QB   VSS VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM17 N5    QB   VDD VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM18 VDD   QB   Q   VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM19 VSS   QB   Q   VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM20 VDD   CK   CKB VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM21 VSS   CK   CKB VSS nmos_svt WGAA=0.011u L=0.012u M=1
+MM22 VDD   CKB  CKBB VDD pmos_svt WGAA=0.011u L=0.012u M=1
+MM23 VSS   CKB  CKBB VSS nmos_svt WGAA=0.011u L=0.012u M=1
+.ends gtA5_cfet_11_dff_x1_svt

@@ -1,0 +1,28 @@
+.subckt gtA5_cfet_5t_32_dlatch_x1_svt CLK D Q VDD VSS
+*.PININFO CLK:I D:I Q:O VDD:B VSS:B
+
+* --- XI3: nand (A=Q, B=net12, Z=net13)
+MM30 XI3_net7 Q     VSS     VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM31 net13    net12 XI3_net7 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM32 net13    Q     VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM33 net13    net12 VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+
+* --- XI2: nand (A=net8, B=CLK, Z=net12)
+MM20 XI2_net7 net8  VSS     VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM21 net12    CLK   XI2_net7 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM22 net12    net8  VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM23 net12    CLK   VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+
+* --- XI1: nand (A=net8, B=net13, Z=Q)
+MM10 XI1_net7 net8  VSS     VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM11 Q        net13 XI1_net7 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM12 Q        net8  VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM13 Q        net13 VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+
+* --- XI0: nand (A=D, B=CLK, Z=net8)
+MM00 XI0_net7 D     VSS     VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM01 net8     CLK   XI0_net7 VSS nmos_svt WGAA=0.032u L=0.012u M=1
+MM02 net8     D     VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+MM03 net8     CLK   VDD     VDD pmos_svt WGAA=0.032u L=0.012u M=1
+
+.ends gtA5_cfet_5t_32_dlatch_x1_svt

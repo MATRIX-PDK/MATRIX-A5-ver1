@@ -1,0 +1,523 @@
+# GTA5_cfet.ict  --  Cadence Techgen Interconnect Technology (ICT)
+# Two-tier CFET (complementary FET) with backside power delivery (BSPDN).
+#
+# Scope: TYPE-ROUTING-only (19 conductors). GATE/GATE2, well/diffusion, and gate
+# vias are intentionally omitted; the FEOL dielectric envelopes (BOX_diel,
+# INTERTIER_diel, INTERTIER2_diel) are retained so M0's cap-to-ground reflects the
+# two-tier oxide. Gate/channel and device-region RC are captured at cell-level PEX
+# via the StarRC ITF (starrc/GTA5cfet.itf).
+#
+# Layer stack (z bottom-to-top, all POSITIVE heights):
+#   bottom_diel        : 0.000 -> 0.005     (package side)
+#   BSM3               : 0.005 -> 1.005     inside BSM3_diel 0.005->1.063
+#   BSM2               : 1.063 -> 1.563     inside BSM2_diel 1.063->1.621
+#   BSM1               : 1.621 -> 1.821     inside BSM1_diel 1.621->1.879
+#   BPR                : 1.879 -> 1.911     inside BPR_diel  1.879->1.969
+#   BOX_diel           : 1.969 -> 2.169     (tier-1 FEOL envelope)
+#   INTERTIER_diel     : 2.169 -> 2.199     (30 nm separator)
+#   INTERTIER2_diel    : 2.199 -> 2.399     (tier-2 FEOL envelope)
+#   M0                 : 2.399 -> 2.423     inside M0_diel  2.399->2.447
+#   M1..M13, RDL       : 2.447 -> 4.779
+# =====================================================================
+
+process GTA5cfet {
+  background_dielectric_constant 1.0
+}
+
+# Well + diffusion blocks intentionally OMITTED (TYPE-ROUTING-only ICT): with the
+# GATE conductors removed, the source/drain diffusions would be orphaned. Device-
+# region RC is captured at cell-level PEX via the StarRC ITF.
+
+# =====================================================================
+# BSPDN BACKSIDE (positive-z stacked, package side at z=0)
+# BSM thickness = 1x tech-LEF WIDTH; min_width/min_spacing per tech LEF.
+# =====================================================================
+
+dielectric bottom_diel {
+  conformal FALSE
+  height    0.000000
+  thickness 0.005000
+  dielectric_constant 3.9
+}
+
+conductor BSM3 {
+  min_spacing 1.0
+  min_width   1.0
+  height      0.005000
+  thickness   1.000000
+  resistivity 0.1
+  gate_forming_layer FALSE
+}
+
+dielectric BSM3_diel {
+  conformal FALSE
+  height    0.005000
+  thickness 1.058000
+  dielectric_constant 3.9
+}
+
+conductor BSM2 {
+  min_spacing 1.1
+  min_width   0.5
+  height      1.063000
+  thickness   0.500000
+  resistivity 0.1
+  gate_forming_layer FALSE
+}
+
+dielectric BSM2_diel {
+  conformal FALSE
+  height    1.063000
+  thickness 0.558000
+  dielectric_constant 3.9
+}
+
+conductor BSM1 {
+  min_spacing 0.8
+  min_width   0.2
+  height      1.621000
+  thickness   0.200000
+  resistivity 0.1
+  gate_forming_layer FALSE
+}
+
+dielectric BSM1_diel {
+  conformal FALSE
+  height    1.621000
+  thickness 0.258000
+  dielectric_constant 3.9
+}
+
+conductor BPR {
+  min_spacing 0.048
+  min_width   0.024
+  height      1.879000
+  thickness   0.032000
+  resistivity 0.132257171
+  gate_forming_layer FALSE
+}
+
+dielectric BPR_diel {
+  conformal FALSE
+  height    1.879000
+  thickness 0.090000
+  dielectric_constant 3.9
+}
+
+# =====================================================================
+# FEOL / MOL -- two-tier CFET (dielectric ENVELOPES ONLY)
+# GATE/GATE2 conductors OMITTED (TYPE-ROUTING-only). Envelopes kept so M0's
+# cap-to-ground reflects the two-tier oxide. ACT/SDCON not modeled (PEX).
+# =====================================================================
+
+dielectric BOX_diel {
+  conformal FALSE
+  height    1.969000
+  thickness 0.200000
+  dielectric_constant 3.9
+}
+
+dielectric INTERTIER_diel {
+  conformal FALSE
+  height    2.169000
+  thickness 0.030000
+  dielectric_constant 3.9
+}
+
+dielectric INTERTIER2_diel {
+  conformal FALSE
+  height    2.199000
+  thickness 0.200000
+  dielectric_constant 3.9
+}
+
+# =====================================================================
+# FRONTSIDE BEOL  --  M0..M13 + RDL  (envelope dielectric pattern)
+# =====================================================================
+
+conductor M0 {
+  min_spacing 0.007
+  min_width   0.009
+  height      2.399000
+  thickness   0.024000
+  resistivity 0.130589401
+  gate_forming_layer FALSE
+}
+
+dielectric M0_diel {
+  conformal FALSE
+  height    2.399000
+  thickness 0.048000
+  dielectric_constant 2.4
+}
+
+conductor M1 {
+  min_spacing 0.010
+  min_width   0.016
+  height      2.447000
+  thickness   0.028000
+  resistivity 0.125006494
+  gate_forming_layer FALSE
+}
+
+dielectric M1_diel {
+  conformal FALSE
+  height    2.447000
+  thickness 0.056000
+  dielectric_constant 2.4
+}
+
+conductor M2 {
+  min_spacing 0.007
+  min_width   0.009
+  height      2.503000
+  thickness   0.024000
+  resistivity 0.130589401
+  gate_forming_layer FALSE
+}
+
+dielectric M2_diel {
+  conformal FALSE
+  height    2.503000
+  thickness 0.048000
+  dielectric_constant 2.4
+}
+
+conductor M3 {
+  min_spacing 0.016
+  min_width   0.016
+  height      2.551000
+  thickness   0.028000
+  resistivity 0.125006494
+  gate_forming_layer FALSE
+}
+
+dielectric M3_diel {
+  conformal FALSE
+  height    2.551000
+  thickness 0.056000
+  dielectric_constant 2.4
+}
+
+conductor M4 {
+  min_spacing 0.021
+  min_width   0.021
+  height      2.607000
+  thickness   0.042000
+  resistivity 0.042020595
+  gate_forming_layer FALSE
+}
+
+dielectric M4_diel {
+  conformal FALSE
+  height    2.607000
+  thickness 0.084000
+  dielectric_constant 2.5
+}
+
+conductor M5 {
+  min_spacing 0.021
+  min_width   0.021
+  height      2.691000
+  thickness   0.042000
+  resistivity 0.042020595
+  gate_forming_layer FALSE
+}
+
+dielectric M5_diel {
+  conformal FALSE
+  height    2.691000
+  thickness 0.084000
+  dielectric_constant 2.5
+}
+
+conductor M6 {
+  min_spacing 0.038
+  min_width   0.038
+  height      2.775000
+  thickness   0.076000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M6_diel {
+  conformal FALSE
+  height    2.775000
+  thickness 0.152000
+  dielectric_constant 2.5
+}
+
+conductor M7 {
+  min_spacing 0.038
+  min_width   0.038
+  height      2.927000
+  thickness   0.076000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M7_diel {
+  conformal FALSE
+  height    2.927000
+  thickness 0.152000
+  dielectric_constant 2.5
+}
+
+conductor M8 {
+  min_spacing 0.038
+  min_width   0.038
+  height      3.079000
+  thickness   0.076000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M8_diel {
+  conformal FALSE
+  height    3.079000
+  thickness 0.152000
+  dielectric_constant 2.5
+}
+
+conductor M9 {
+  min_spacing 0.038
+  min_width   0.038
+  height      3.231000
+  thickness   0.076000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M9_diel {
+  conformal FALSE
+  height    3.231000
+  thickness 0.152000
+  dielectric_constant 2.5
+}
+
+conductor M10 {
+  min_spacing 0.056
+  min_width   0.056
+  height      3.383000
+  thickness   0.112000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M10_diel {
+  conformal FALSE
+  height    3.383000
+  thickness 0.224000
+  dielectric_constant 2.5
+}
+
+conductor M11 {
+  min_spacing 0.056
+  min_width   0.056
+  height      3.607000
+  thickness   0.112000
+  resistivity 0.046238515
+  gate_forming_layer FALSE
+}
+
+dielectric M11_diel {
+  conformal FALSE
+  height    3.607000
+  thickness 0.224000
+  dielectric_constant 2.5
+}
+
+conductor M12 {
+  min_spacing 0.360
+  min_width   0.360
+  height      3.831000
+  thickness   0.112000
+  resistivity 0.034585319
+  gate_forming_layer FALSE
+}
+
+dielectric M12_diel {
+  conformal FALSE
+  height    3.831000
+  thickness 0.224000
+  dielectric_constant 2.5
+}
+
+conductor M13 {
+  min_spacing 0.360
+  min_width   0.360
+  height      4.055000
+  thickness   0.112000
+  resistivity 0.034585319
+  gate_forming_layer FALSE
+}
+
+dielectric M13_diel {
+  conformal FALSE
+  height    4.055000
+  thickness 0.224000
+  dielectric_constant 2.5
+}
+
+conductor RDL {
+  min_spacing 1.600
+  min_width   1.600
+  height      4.279000
+  thickness   0.500000
+  resistivity 0.01
+  gate_forming_layer FALSE
+}
+
+# =====================================================================
+# VIAS
+# area_resistance = (RPV, AREA), mirroring the StarRC ITF (starrc/GTA5cfet.itf).
+# Gate vias (VG/VG2/VG12) and VSD/VSDn are not modeled (gates omitted here). VBPR
+# is the BPR->M0 power abstraction; the in-cell via stack is captured at PEX.
+# =====================================================================
+
+# Backside power rail -> M0 (BSPDN-aware Innovus power routing)
+via VBPR {
+  bottom_layer    BPR
+  top_layer       M0
+  min_spacing     0.010
+  min_width       0.010
+  area_resistance 44.00 0.000120
+}
+
+# Backside via stack (BSM3 -> BSM2 -> BSM1 -> BPR)
+via TSV {
+  bottom_layer    BSM1
+  top_layer       BPR
+  min_spacing     0.02
+  min_width       0.02
+  area_resistance 23.1 0.0004
+}
+
+via VBSM1 {
+  bottom_layer    BSM2
+  top_layer       BSM1
+  min_spacing     0.2
+  min_width       0.2
+  area_resistance 0.231 0.04
+}
+
+via VBSM2 {
+  bottom_layer    BSM3
+  top_layer       BSM2
+  min_spacing     0.4
+  min_width       0.4
+  area_resistance 0.058 0.16
+}
+
+# Frontside BEOL: M->M
+via V0 {
+  bottom_layer    M0
+  top_layer       M1
+  min_spacing     0.007
+  min_width       0.009
+  area_resistance 114.05 0.000081
+}
+
+via V1 {
+  bottom_layer    M1
+  top_layer       M2
+  min_spacing     0.007
+  min_width       0.009
+  area_resistance 93.31 0.000099
+}
+
+via V2 {
+  bottom_layer    M2
+  top_layer       M3
+  min_spacing     0.007
+  min_width       0.009
+  area_resistance 73.32 0.000126
+}
+
+via V3 {
+  bottom_layer    M3
+  top_layer       M4
+  min_spacing     0.017
+  min_width       0.017
+  area_resistance 45.78 0.000294
+}
+
+via V4 {
+  bottom_layer    M4
+  top_layer       M5
+  min_spacing     0.021
+  min_width       0.021
+  area_resistance 27.80 0.000441
+}
+
+via V5 {
+  bottom_layer    M5
+  top_layer       M6
+  min_spacing     0.028
+  min_width       0.028
+  area_resistance 14.89 0.000798
+}
+
+via V6 {
+  bottom_layer    M6
+  top_layer       M7
+  min_spacing     0.038
+  min_width       0.038
+  area_resistance 13.26 0.001444
+}
+
+via V7 {
+  bottom_layer    M7
+  top_layer       M8
+  min_spacing     0.038
+  min_width       0.038
+  area_resistance 13.26 0.001444
+}
+
+via V8 {
+  bottom_layer    M8
+  top_layer       M9
+  min_spacing     0.038
+  min_width       0.038
+  area_resistance 13.26 0.001444
+}
+
+via V9 {
+  bottom_layer    M9
+  top_layer       M10
+  min_spacing     0.046
+  min_width       0.046
+  area_resistance 7.65 0.002128
+}
+
+via V10 {
+  bottom_layer    M10
+  top_layer       M11
+  min_spacing     0.056
+  min_width       0.056
+  area_resistance 6.08 0.003136
+}
+
+via V11 {
+  bottom_layer    M11
+  top_layer       M12
+  min_spacing     0.056
+  min_width       0.056
+  area_resistance 6.08 0.003136
+}
+
+via V12 {
+  bottom_layer    M12
+  top_layer       M13
+  min_spacing     0.056
+  min_width       0.056
+  area_resistance 6.08 0.003136
+}
+
+via V13 {
+  bottom_layer    M13
+  top_layer       RDL
+  min_spacing     0.056
+  min_width       0.056
+  area_resistance 6.08 0.003136
+}

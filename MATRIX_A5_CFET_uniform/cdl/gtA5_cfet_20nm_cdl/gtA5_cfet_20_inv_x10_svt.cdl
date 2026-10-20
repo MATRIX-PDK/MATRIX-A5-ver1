@@ -1,0 +1,5 @@
+.subckt gtA5_cfet_20_inv_x10_svt A Y VDD VSS
+*.PININFO A:I Y:O VDD:B VSS:B
+MM0 Y A VDD VDD pmos_svt WGAA=0.020u L=0.012u M=10
+MM1 Y A VSS VSS nmos_svt WGAA=0.020u L=0.012u M=10
+.ends gtA5_cfet_20_inv_x10_svt

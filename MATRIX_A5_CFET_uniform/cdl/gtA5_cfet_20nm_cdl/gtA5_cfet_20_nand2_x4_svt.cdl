@@ -1,0 +1,13 @@
+.subckt gtA5_cfet_20_nand2_x4_svt A B Y VDD VSS
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+MM12 net29 A VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM11 Y B net29 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM10 net23 A VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM9 Y B net23 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM7 Y B net17 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM8 net17 A VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM3 net13 A VSS VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM1 Y B net13 VSS nmos_svt WGAA=0.020u L=0.012u M=1
+MM2 Y A VDD VDD pmos_svt WGAA=0.020u L=0.012u M=4
+MM0 Y B VDD VDD pmos_svt WGAA=0.020u L=0.012u M=4
+.ends gtA5_cfet_20_nand2_x4_svt

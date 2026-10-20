@@ -1,0 +1,17 @@
+MATRIX-PDK Academic and Non-Commercial License v1.0
+
+Copyright (c) Georgia Institute of Technology
+
+The MATRIX-PDK framework, models, documentation, and associated infrastructure are provided solely for academic research, educational purposes, and other non-commercial activities.
+
+Users may use, reproduce, modify, and distribute the materials for non-commercial purposes, provided that this copyright notice and license are retained.
+
+Commercial use, redistribution for commercial purposes, incorporation into commercial products, internal product development by for-profit entities, consulting activities, or use in support of commercial services is prohibited without prior written approval from Georgia Institute of Technology, the Principal Investigator, and the original developers.
+
+Users must appropriately cite the corresponding publications and repository in any publication or presentation derived from MATRIX-PDK.
+
+Third-party components: parts of this kit were developed starting from the GT3 open-source PDK, which is distributed under the BSD 3-Clause License. Those parts remain subject to that license, and where its terms differ from this one, the BSD 3-Clause License governs for those files. See THIRD_PARTY_NOTICES.md for the affected files and the full license text.
+
+No patent rights are granted under this license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

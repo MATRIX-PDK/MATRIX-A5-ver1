@@ -1,0 +1,44 @@
+# =====================================================================
+# celllist_group2_hard  --  GTA5_CFET_5t_32_ver2_acc cell-grouping (2026-06-13)
+#
+# GROUP 2 = "hard" cells that risk the Spectre numerical failures on the
+# stiff 5t_32 SPFs. These get the SPECIAL recipe (Spectre APS + gear2 +
+# bias-free conductive regularization gmin/rshunt; minimal/zero cmin).
+#
+# Two failure modes live here:
+#   * deep series stacks (>=3-high): aoi/oai/ao/oa *211/*31/*32/*33,
+#     nand3/nor3/and3/or3  -> floating internal stack nodes (SPECTRE-16928)
+#     and/or stiff sub-minstep RC (SPECTRE-16192)
+#   * sequential feedback: dffasync / dffsyn / dlatch  -> latch-loop nodes
+#
+# Partition rule = max series-stack height >= 3  OR  sequential feedback.
+# This is a CONSERVATIVE prediction -- a cell here that actually passes the
+# plain (no-cmin) recipe should be DEMOTED to celllist_group1_regular so it
+# carries zero special-recipe risk. Finalize empirically (see group1 header).
+#
+# 24 cells (dff_x1 excluded: no schematic; ao22_x1 excluded: GDS A2 open).
+# =====================================================================
+gtA5_cfet_5t_32_and3_x1_svt
+gtA5_cfet_5t_32_nand3_x1_svt
+gtA5_cfet_5t_32_nor3_x1_svt
+gtA5_cfet_5t_32_nor3_x2_svt
+gtA5_cfet_5t_32_or3_x1_svt
+gtA5_cfet_5t_32_ao211_x1_svt
+gtA5_cfet_5t_32_ao31_x1_svt
+gtA5_cfet_5t_32_ao32_x1_svt
+gtA5_cfet_5t_32_ao33_x1_svt
+gtA5_cfet_5t_32_aoi211_x1_svt
+gtA5_cfet_5t_32_aoi31_x1_svt
+gtA5_cfet_5t_32_aoi32_x1_svt
+gtA5_cfet_5t_32_aoi33_x1_svt
+gtA5_cfet_5t_32_oa211_x1_svt
+gtA5_cfet_5t_32_oa31_x1_svt
+gtA5_cfet_5t_32_oa32_x1_svt
+gtA5_cfet_5t_32_oa33_x1_svt
+gtA5_cfet_5t_32_oai211_x1_svt
+gtA5_cfet_5t_32_oai31_x1_svt
+gtA5_cfet_5t_32_oai32_x1_svt
+gtA5_cfet_5t_32_oai33_x1_svt
+gtA5_cfet_5t_32_dffasync_x1_svt
+gtA5_cfet_5t_32_dffsyn_x1_svt
+gtA5_cfet_5t_32_dlatch_x1_svt
