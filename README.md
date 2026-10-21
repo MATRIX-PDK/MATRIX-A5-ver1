@@ -136,6 +136,7 @@ If you use or adapt MATRIX-A5 in your work or publication, please cite the MATRI
 > Minji Shon, Seongkwang Lim, Jungyoun Kwak, Jianwei Jia, Haomei Liu, and Shimeng Yu,
 > "MATRIX-A5: An Open-Source CFET PDK with CFlex Track-Mixing Libraries for RTL-to-GDSII DTCO,"
 > IEEE Journal on Exploratory Solid-State Computational Devices and Circuits (JXCDC), 2026.
+> doi: [10.1109/JXCDC.2026.3744406](https://doi.org/10.1109/JXCDC.2026.3744406)
 
 ```bibtex
 @article{shon26matrixa5,
@@ -143,6 +144,7 @@ If you use or adapt MATRIX-A5 in your work or publication, please cite the MATRI
   title   = {{MATRIX-A5}: An Open-Source {CFET} {PDK} with {CFlex} Track-Mixing Libraries for {RTL}-to-{GDSII} {DTCO}},
   journal = {IEEE J. Explor. Solid-State Comput. Devices Circuits (JXCDC)},
   year    = {2026},
+  doi     = {10.1109/JXCDC.2026.3744406},
 }
 ```
 
